@@ -4,8 +4,8 @@
     "clinicNamePlaceholder": "اسم العيادة",
     "userMenu": "حساب المستخدم",
     "user": {
-      "name": "مدير النظام",
-      "email": "admin@example.com",
+      "name": "مستخدم العيادة",
+      "email": "clinic@example.com",
       "logout": "تسجيل الخروج"
     },
     "language": {
@@ -19,7 +19,7 @@
     "mobileNav": {
       "openMenu": "فتح قائمة التنقل",
       "sheetTitle": "التنقل الرئيسي",
-      "adminSheetTitle": "تنقل لوحة الإدارة"
+      "clinicSheetTitle": "تنقل العيادة"
     }
   },
   "nav": {
@@ -1182,213 +1182,10 @@
       "title": "مرحباً بعودتك",
       "description": "سجل الدخول إلى حسابك",
       "email": "البريد الإلكتروني",
-      "emailPlaceholder": "admin@example.com",
+      "emailPlaceholder": "clinic@example.com",
       "password": "كلمة المرور",
       "passwordPlaceholder": "********",
-      "portalLabel": "نوع البوابة",
-      "portalPlaceholder": "اختر نوع البوابة",
-      "portalClinic": "العيادة",
-      "portalAdmin": "الأدمن",
       "submit": "تسجيل الدخول"
-    }
-  },
-  "admin": {
-    "brand": "أسترو كلينيكس",
-    "headerTitle": "لوحة تحكم الأدمن",
-    "logout": "تسجيل الخروج",
-    "nav": {
-      "statistics": "الإحصائيات",
-      "subscriptions": "الاشتراكات",
-      "users": "المستخدمون",
-      "billing": "خطط الدفع",
-      "labs": "إدارة المختبرات",
-      "clinics": "العيادات",
-      "products": "المنتجات",
-      "schedule": "الجدولة",
-      "staff": "الطاقم",
-      "settings": "الإعدادات"
-    },
-    "dashboard": {
-      "totalUsers": "إجمالي المستخدمين",
-      "activeUsers": "المستخدمون النشطون",
-      "clinicsCount": "عدد العيادات",
-      "totalSubscriptions": "إجمالي الاشتراكات",
-      "popularPlan": "أكثر خطة انتشاراً",
-      "totalRevenue": "إجمالي الإيرادات",
-      "topSellers": "أفضل البائعين",
-      "revenuePerMonth": "الإيرادات لكل شهر",
-      "topPlans": "أكثر الخطط مبيعاً",
-      "subscriptionLabel": "اشتراك",
-      "username": "اسم المستخدم",
-      "basicPlan": "الخطة الأساسية",
-      "proPlan": "الخطة الاحترافية",
-      "freeTrial": "نسخة تجريبية"
-    },
-    "subscriptions": {
-      "title": "الاشتراكات",
-      "subtitle": "إدارة الاشتراكات والمدفوعات",
-      "newSubscription": "اشتراك جديد",
-      "searchPlaceholder": "ابحث عن أي شيء...",
-      "filters": {
-        "all": "الكل",
-        "active": "نشط",
-        "expired": "منتهي"
-      },
-      "columns": {
-        "user": "المستخدم",
-        "planType": "نوع الخطة",
-        "startedAt": "تاريخ البدء",
-        "expiresAt": "تاريخ الانتهاء",
-        "remainingDays": "الأيام المتبقية",
-        "status": "الحالة",
-        "actions": "الإجراءات"
-      },
-      "status": {
-        "active": "نشط",
-        "expired": "منتهي"
-      },
-      "actions": {
-        "suspend": "إيقاف",
-        "renew": "تجديد",
-        "edit": "تعديل",
-        "delete": "حذف"
-      },
-      "days": "يوم",
-      "pagination": {
-        "previous": "السابق",
-        "next": "التالي"
-      },
-      "modal": {
-        "title": "اشتراك جديد",
-        "userLabel": "اختر المستخدم",
-        "planLabel": "اختر الخطة",
-        "selectPlaceholder": "اختر ...",
-        "fromLabel": "من",
-        "toLabel": "إلى",
-        "datePlaceholder": "أدخل تاريخاً",
-        "cancel": "إلغاء",
-        "confirm": "تأكيد الاشتراك"
-      }
-    },
-    "usersPage": {
-      "title": "المستخدمون",
-      "subtitle": "إدارة وعرض المستخدمين",
-      "newUser": "مستخدم جديد",
-      "searchPlaceholder": "ابحث عن أي شيء...",
-      "filterBy": "تصفية حسب",
-      "filters": {
-        "all": "الكل",
-        "active": "نشط",
-        "expired": "منتهي"
-      },
-      "columns": {
-        "user": "المستخدم",
-        "phoneNumber": "رقم الهاتف",
-        "clinics": "العيادات",
-        "subscriptions": "الاشتراكات",
-        "revenue": "الإيرادات",
-        "status": "الحالة",
-        "actions": "الإجراءات"
-      },
-      "status": {
-        "active": "نشط",
-        "expired": "منتهي"
-      },
-      "actions": {
-        "edit": "تعديل المستخدم",
-        "delete": "حذف المستخدم"
-      },
-      "pagination": {
-        "previous": "السابق",
-        "next": "التالي"
-      },
-      "modal": {
-        "title": "مستخدم جديد",
-        "userName": "اسم المستخدم",
-        "userNamePlaceholder": "أدخل اسماً",
-        "email": "البريد الإلكتروني",
-        "emailPlaceholder": "example@gmail.com",
-        "phone": "رقم الهاتف",
-        "phonePlaceholder": "+XXX-XXXXXXXXX",
-        "address": "العنوان",
-        "addressPlaceholder": "+XXX-XXXXXXXXX",
-        "cancel": "إلغاء",
-        "confirm": "إضافة مستخدم"
-      },
-      "details": {
-        "edit": "تعديل",
-        "stats": {
-          "numberOfClinics": "عدد العيادات",
-          "totalDoctors": "إجمالي الأطباء",
-          "totalSecretaries": "إجمالي السكرتارية",
-          "totalPatients": "إجمالي المرضى"
-        },
-        "dailyUsage": {
-          "title": "الاستخدام اليومي",
-          "subtitle": "عرض إحصائيات الاستخدام اليومية للمستخدم",
-          "appointments": "المواعيد",
-          "treatments": "العلاجات",
-          "labsRequests": "طلبات المخبر",
-          "patientsCreated": "المرضى المضافون",
-          "upDelta": "+5.9% عن الأمس",
-          "downDelta": "-5.9% عن الأمس"
-        },
-        "subscriptionsTitle": "الاشتراكات"
-      }
-    },
-    "billingPlans": {
-      "title": "خطط الدفع",
-      "subtitle": "إدارة وعرض خطط الدفع",
-      "newPlan": "خطة جديدة",
-      "actions": {
-        "edit": "تعديل",
-        "delete": "حذف"
-      },
-      "modal": {
-        "title": "خطة جديدة",
-        "planName": "اسم الخطة",
-        "planNamePlaceholder": "أدخل اسماً",
-        "price": "السعر",
-        "pricePlaceholder": "أرقام فقط (USD $)",
-        "duration": "المدة",
-        "durationPlaceholder": "أدخل المدة",
-        "feature1": "الميزة 1",
-        "feature2": "الميزة 2",
-        "featurePlaceholder": "أدخل ميزة",
-        "moreFeatures": "مزايا إضافية",
-        "cancel": "إلغاء",
-        "confirm": "إضافة خطة"
-      }
-    },
-    "labsManagement": {
-      "title": "إدارة المخابر",
-      "subtitle": "إدارة وعرض جميع المخابر",
-      "addLab": "إضافة مخبر",
-      "searchPlaceholder": "ابحث عن أي شيء...",
-      "columns": {
-        "lab": "المخبر",
-        "phoneNumber": "رقم الهاتف",
-        "totalRequests": "إجمالي الطلبات",
-        "usedBy": "مستخدم من",
-        "actions": "الإجراءات"
-      },
-      "actions": {
-        "edit": "تعديل المخبر",
-        "delete": "حذف المخبر"
-      },
-      "pagination": {
-        "previous": "السابق",
-        "next": "التالي"
-      },
-      "modal": {
-        "title": "مخبر جديد",
-        "laboratoryName": "اسم المخبر",
-        "phoneNumber": "رقم الهاتف",
-        "address": "العنوان",
-        "placeholder": "admin@example.com",
-        "cancel": "إلغاء",
-        "confirm": "إضافة مخبر"
-      }
     }
   }
 }

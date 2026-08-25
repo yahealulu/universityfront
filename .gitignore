@@ -1,9 +1,1 @@
-node_modules
-dist
-*.local
-npm-debug.log*
-npm-log.txt
-.DS_Store
-*.tsbuildinfo
-.vercel
-.cursor
+Nothing needs to be added to the .gitignore file based on the provided file changes, as they consist only of source code files (.tsx, .ts, .json) without any build artifacts, dependencies, or temporary files that should be ignored.

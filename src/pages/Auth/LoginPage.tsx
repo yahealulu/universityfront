@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import type { PortalType } from '@/store/auth.store'
 import { useAuthStore } from '@/store/auth.store'
 
@@ -18,9 +17,9 @@ export const LoginPage: FC = () => {
   const navigate = useNavigate()
   const setSession = useAuthStore((state) => state.setSession)
 
-  const [email, setEmail] = useState('admin@example.com')
+  const [email, setEmail] = useState('clinic@example.com')
   const [password, setPassword] = useState('********')
-  const [portalType, setPortalType] = useState<PortalType>(DEFAULT_PORTAL)
+  const portalType: PortalType = 'clinic'
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -29,11 +28,6 @@ export const LoginPage: FC = () => {
       token: `mock-${portalType}-token`,
       portalType,
     })
-
-    if (portalType === 'admin') {
-      navigate('/admin/dashboard', { replace: true })
-      return
-    }
 
     navigate('/clinic/dashboard', { replace: true })
   }
@@ -80,19 +74,6 @@ export const LoginPage: FC = () => {
                 placeholder={t('auth.login.passwordPlaceholder')}
                 required
               />
-            </div>
-
-            <div className="space-y-1.5">
-              <Label htmlFor="login-portal">{t('auth.login.portalLabel')}</Label>
-              <Select value={portalType} onValueChange={(value) => setPortalType(value as PortalType)}>
-                <SelectTrigger id="login-portal" aria-label={t('auth.login.portalLabel')}>
-                  <SelectValue placeholder={t('auth.login.portalPlaceholder')} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="clinic">{t('auth.login.portalClinic')}</SelectItem>
-                  <SelectItem value="admin">{t('auth.login.portalAdmin')}</SelectItem>
-                </SelectContent>
-              </Select>
             </div>
 
             <Button type="submit" className="w-full">
