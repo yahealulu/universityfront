@@ -1,0 +1,1394 @@
+{
+  "app": {
+    "name": "أسترو كلينيك",
+    "clinicNamePlaceholder": "اسم العيادة",
+    "userMenu": "حساب المستخدم",
+    "user": {
+      "name": "مدير النظام",
+      "email": "admin@example.com",
+      "logout": "تسجيل الخروج"
+    },
+    "language": {
+      "switchToAr": "التبديل إلى العربية",
+      "switchToEn": "التبديل إلى الإنجليزية"
+    },
+    "sidebar": {
+      "collapse": "طي الشريط الجانبي",
+      "expand": "توسيع الشريط الجانبي"
+    },
+    "mobileNav": {
+      "openMenu": "فتح قائمة التنقل",
+      "sheetTitle": "التنقل الرئيسي",
+      "adminSheetTitle": "تنقل لوحة الإدارة"
+    }
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "patients": "المرضى",
+    "appointments": "المواعيد",
+    "invoice": "الفواتير",
+    "labsManagement": "إدارة المختبرات",
+    "labsRequests": "طلبات المختبر",
+    "doctors": "الأطباء",
+    "secretaries": "السكرتارية",
+    "expenses": "المصاريف",
+    "reports": "التقارير",
+    "settings": "الإعدادات"
+  },
+  "clinics": {
+    "switcher": {
+      "triggerAria": "فتح قائمة العيادات",
+      "title": "عياداتي",
+      "subtitle": "عرض وإدارة عياداتك",
+      "addClinic": "+ إضافة عيادة",
+      "loading": "جاري تحميل العيادات…"
+    },
+    "newWizard": {
+      "title": "عيادة جديدة",
+      "cancel": "إلغاء",
+      "back": "رجوع",
+      "next": "التالي",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "step1": {
+        "heading": "أنشئ عيادتك",
+        "subheading": "قم بإعداد عيادة الأسنان!",
+        "nameLabel": "اسم العيادة",
+        "namePlaceholder": "اسم عيادتك هنا",
+        "phoneLabel": "رقم العيادة",
+        "phonePlaceholder": "XXXXXXXXX",
+        "phonePrefix": "+963 -",
+        "addressLabel": "العنوان",
+        "addressPlaceholder": "١٢٣ الشارع الرئيسي",
+        "logoLabel": "شعار العيادة",
+        "logoHint": "انقر للرفع أو اسحب وأفلت الصورة",
+        "logoSubhint": "PNG أو JPG حتى ٥ ميجابايت",
+        "logoErrorType": "يرجى رفع صورة بصيغة PNG أو JPG.",
+        "logoErrorSize": "يجب ألا يتجاوز حجم الصورة ٥ ميجابايت."
+      },
+      "step2": {
+        "heading": "أيام العمل",
+        "subheading": "حدد أيام عملك!"
+      },
+      "step3": {
+        "heading": "ساعات العمل",
+        "subheading": "حدد ساعات عملك!",
+        "startLabel": "وقت البداية",
+        "endLabel": "وقت النهاية"
+      },
+      "days": {
+        "saturday": "السبت",
+        "sunday": "الأحد",
+        "monday": "الإثنين",
+        "tuesday": "الثلاثاء",
+        "wednesday": "الأربعاء",
+        "thursday": "الخميس",
+        "friday": "الجمعة"
+      },
+      "validation": {
+        "name": "اسم العيادة مطلوب.",
+        "phone": "رقم الهاتف مطلوب.",
+        "address": "العنوان مطلوب.",
+        "workDays": "اختر يوم عمل واحد على الأقل.",
+        "startTime": "وقت البداية مطلوب.",
+        "endTime": "وقت النهاية مطلوب."
+      }
+    }
+  },
+  "dashboard": {
+    "stats": {
+      "totalRevenue": "إجمالي الإيرادات",
+      "totalExpenses": "إجمالي المصاريف",
+      "netProfit": "صافي الربح",
+      "profitMargins": "هوامش الربح",
+      "deltaVersusLastMonth": "مقارنة بالشهر الماضي"
+    },
+    "topDoctors": {
+      "title": "أفضل الأطباء أداءً",
+      "treatments_one": "{{count}} علاج",
+      "treatments_other": "{{count}} علاجات",
+      "empty": "لا يوجد أطباء للعرض",
+      "error": "تعذر تحميل قائمة الأطباء",
+      "retry": "إعادة المحاولة"
+    },
+    "appointments": {
+      "title": "مواعيد اليوم",
+      "patientId": "المعرّف : {{id}}",
+      "empty": "لا توجد مواعيد مجدولة اليوم",
+      "error": "تعذر تحميل المواعيد",
+      "retry": "إعادة المحاولة"
+    },
+    "expenses": {
+      "title": "تفصيل المصاريف",
+      "empty": "لا توجد بيانات مصاريف",
+      "error": "تعذر تحميل المصاريف",
+      "retry": "إعادة المحاولة"
+    },
+    "chart": {
+      "title": "الإيرادات مقابل المصاريف",
+      "revenue": "الإيرادات",
+      "expenses": "المصاريف",
+      "error": "تعذر تحميل بيانات المخطط",
+      "retry": "إعادة المحاولة",
+      "fallbackTitle": "المخطط غير متاح"
+    },
+    "error": {
+      "section": "حدث خطأ في هذا القسم.",
+      "page": "حدث خطأ أثناء تحميل لوحة التحكم.",
+      "retry": "حاول مرة أخرى"
+    },
+    "loading": "جاري التحميل…",
+    "expenseCategories": {
+      "ec-doctors": "الأطباء",
+      "ec-labs": "المختبرات",
+      "ec-supplies": "المستلزمات",
+      "ec-rents": "الإيجارات",
+      "ec-general": "عام",
+      "ec-others": "أخرى"
+    }
+  },
+  "common": {
+    "percent": "{{value}}٪",
+    "comingSoon": "هذا القسم قيد الإعداد.",
+    "close": "إغلاق"
+  },
+  "patientPortal": {
+    "clinicName": "عيادات أسترو لطب الأسنان",
+    "title": "ملخص رعايتك",
+    "subtitle": "نظرة عامة ودية على رصيدك وزياراتك—يمكنك مشاركة هذه الصفحة مع العائلة عند الحاجة.",
+    "patientLabel": "المريض",
+    "recordId": "رقم الملف: {{code}}",
+    "fallbackName": "مريض {{code}}",
+    "phoneDisplay": "+963 {{digits}}",
+    "balanceSectionTitle": "نظرة على الرصيد",
+    "balanceSectionHint": "الأرقام أدناه توضيحية لمساعدتك على التخطيط؛ يرجى تأكيد المبالغ الرسمية مع الاستقبال.",
+    "stats": {
+      "totalInvoiced": "إجمالي الفواتير",
+      "totalPaid": "المدفوع حتى الآن",
+      "totalRemaining": "المتبقي"
+    },
+    "nextDueLabel": "موعد المتابعة المقترح:",
+    "appointmentsTitle": "مواعيدك",
+    "footerDisclaimer": "هذه صفحة ملخص مبسطة للمريض وليست فاتورة قانونية. للإيصالات أو التعديلات أو الحالات العاجلة يرجى الاتصال بالعيادة.",
+    "mock": {
+      "doctors": {
+        "0": "د. سارة المصرّي — طب أسنان عام",
+        "1": "د. جيمس أوكونكوو — علاج عصب",
+        "2": "د. ليلى حداد — تقويم أسنان",
+        "3": "د. ماركو روسي — جراحة فم",
+        "4": "د. إيميلي تشين — أمراض لثة",
+        "5": "د. عمر فاروق — تركيبات وتعويضات"
+      },
+      "treatments": {
+        "0": "تنظيف وتلميع روتيني",
+        "1": "حشو مركب (ضرس)",
+        "2": "علاج عصب — ضرس",
+        "3": "تحضير تاج وتاج مؤقت",
+        "4": "جلسة تبييض داخل العيادة",
+        "5": "استشارة زراعة",
+        "6": "صيانة لثة دورية",
+        "7": "تعديل تقويم"
+      },
+      "notes": {
+        "0": "يرجى الحضور قبل 10 دقائق لتحديث التاريخ الطبي.",
+        "1": "أحضر أي أشعة سابقة على ذاكرة USB إن وجدت.",
+        "2": "يُفضّل وجبة خفيفة قبل الإجراءات الأطول.",
+        "3": "موقف سيارات خلف مدخل العيادة.",
+        "4": "لإعادة الجدولة اتصل بنا قبل 24 ساعة على الأقل."
+      }
+    }
+  },
+  "appointments": {
+    "title": "المواعيد",
+    "subtitle": "إدارة جدول مواعيد العيادة",
+    "error": {
+      "load": "تعذر تحميل الجدول.",
+      "retry": "إعادة المحاولة"
+    },
+    "toolbar": {
+      "prevDay": "اليوم السابق",
+      "nextDay": "اليوم التالي",
+      "searchPlaceholder": "ابحث عن أي شيء...",
+      "searchAria": "البحث في المواعيد"
+    },
+    "grid": {
+      "time": "الوقت",
+      "addAria": "إضافة موعد مع {{doctor}} في {{time}}"
+    },
+    "card": {
+      "patientId": "المعرّف: {{id}}",
+      "durationMin": "{{count}} د"
+    },
+    "modal": {
+      "title": "موعد جديد",
+      "doctor": "الطبيب",
+      "doctorPlaceholder": "اختر طبيباً...",
+      "patient": "المريض",
+      "patientPlaceholder": "ابحث عن مريض...",
+      "patientSearchPlaceholder": "بحث...",
+      "treatment": "نوع العلاج (اختياري)",
+      "treatmentPlaceholder": "اختر...",
+      "treatmentNone": "بدون",
+      "duration": "المدة",
+      "durationMinutes": {
+        "30": "30 دقيقة",
+        "60": "60 دقيقة",
+        "90": "90 دقيقة",
+        "120": "120 دقيقة"
+      },
+      "cancel": "إلغاء",
+      "submit": "إضافة الطلب",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر إنشاء الموعد. حاول مرة أخرى.",
+      "validation": {
+        "doctor": "يرجى اختيار طبيب.",
+        "patient": "يرجى اختيار مريض."
+      }
+    }
+  },
+  "invoices": {
+    "title": "الفواتير",
+    "subtitle": "إدارة وعرض الفواتير والمدفوعات",
+    "addButton": "إضافة فاتورة",
+    "error": {
+      "load": "تعذر تحميل الفواتير.",
+      "retry": "إعادة المحاولة"
+    },
+    "empty": "لا توجد فواتير مطابقة للتصفية.",
+    "toolbar": {
+      "searchPlaceholder": "ابحث عن أي شيء...",
+      "searchAria": "البحث في الفواتير"
+    },
+    "filters": {
+      "all": "الكل",
+      "paid": "مدفوعة",
+      "partially_paid": "مدفوعة جزئياً",
+      "unpaid": "غير مدفوعة"
+    },
+    "status": {
+      "unpaid": "غير مدفوعة",
+      "partially_paid": "مدفوعة جزئياً",
+      "paid": "مدفوعة"
+    },
+    "table": {
+      "invoiceId": "رقم الفاتورة",
+      "patient": "المريض",
+      "treatment": "نوع العلاج",
+      "date": "التاريخ",
+      "total": "الإجمالي",
+      "paid": "المدفوع",
+      "remaining": "المتبقي",
+      "status": "الحالة",
+      "actions": "إجراءات",
+      "editAria": "تعديل الفاتورة"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "addModal": {
+      "title": "إضافة فاتورة",
+      "patient": "المريض",
+      "patientPlaceholder": "اختر مريضاً",
+      "treatment": "نوع العلاج",
+      "treatmentPlaceholder": "اختر علاجاً",
+      "price": "السعر",
+      "paidOptional": "المبلغ المدفوع (اختياري)",
+      "moneyPlaceholder": "أرقام فقط (دولار $)",
+      "notes": "ملاحظات",
+      "notesPlaceholder": "اكتب ملاحظات حول هذا العلاج",
+      "cancel": "إلغاء",
+      "submit": "إضافة الفاتورة",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر إنشاء الفاتورة. حاول مرة أخرى.",
+      "validation": {
+        "patient": "يرجى اختيار مريض.",
+        "treatment": "يرجى اختيار علاج.",
+        "total": "أدخل سعراً صحيحاً.",
+        "notesMax": "الملاحظات 100 حرف كحد أقصى.",
+        "paidTooHigh": "المبلغ المدفوع لا يمكن أن يتجاوز السعر.",
+        "paidInvalid": "أدخل مبلغاً مدفوعاً صحيحاً."
+      }
+    },
+    "details": {
+      "title": "تفاصيل الفاتورة",
+      "total": "الإجمالي",
+      "paid": "المدفوع",
+      "remaining": "المتبقي",
+      "tabNewPayment": "دفعة جديدة",
+      "tabHistory": "سجل المدفوعات",
+      "paymentDate": "التاريخ",
+      "paymentAmount": "المبلغ",
+      "morePayments": "+ المزيد من الدفعات",
+      "removeRow": "حذف الصف",
+      "fixRows": "صحّح صفوف الدفع أدناه.",
+      "noPayments": "لا توجد مدفوعات بعد.",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "savePaymentsError": "تعذر حفظ المدفوعات.",
+      "loadError": "تعذر تحميل تفاصيل الفاتورة.",
+      "retry": "إعادة المحاولة",
+      "confirmDeletePayment": "حذف هذه الدفعة؟",
+      "deletePaymentTitle": "حذف الدفعة؟",
+      "deletePaymentDescription": "سيتم إزالة الدفعة من هذه الفاتورة. لا يمكن التراجع.",
+      "deletePaymentCancel": "إلغاء",
+      "deletePaymentConfirm": "حذف",
+      "deletePaymentLoading": "جاري الحذف…",
+      "deletePaymentError": "تعذر حذف هذه الدفعة. حاول مرة أخرى.",
+      "editPayment": "تعديل الدفعة",
+      "deletePayment": "حذف الدفعة",
+      "cancelEdit": "إلغاء",
+      "saveEdit": "حفظ",
+      "validation": {
+        "date": "اختر تاريخاً.",
+        "amount": "أدخل مبلغاً صحيحاً."
+      }
+    }
+  },
+  "labs": {
+    "title": "إدارة المخابر",
+    "subtitle": "إدارة وعرض جميع المخابر",
+    "addButton": "إضافة مخبر",
+    "searchPlaceholder": "ابحث عن أي شيء…",
+    "searchAria": "البحث في المخابر",
+    "error": {
+      "load": "تعذر تحميل المخابر.",
+      "retry": "إعادة المحاولة"
+    },
+    "empty": "لا توجد مخابر مطابقة للبحث.",
+    "deleteConfirm": "حذف المخبر \"{{name}}\"؟ لا يمكن التراجع.",
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "table": {
+      "lab": "المخبر",
+      "phone": "رقم الهاتف",
+      "totalRequests": "إجمالي الطلبات",
+      "activeRequests": "طلبات نشطة",
+      "actions": "إجراءات",
+      "editAria": "تعديل المخبر",
+      "deleteAria": "حذف المخبر",
+      "requestsCountTotal_zero": "لا طلبات",
+      "requestsCountTotal_one": "طلب واحد",
+      "requestsCountTotal_two": "طلبان",
+      "requestsCountTotal_few": "{{count}} طلبات",
+      "requestsCountTotal_many": "{{count}} طلباً",
+      "requestsCountTotal_other": "{{count}} طلب",
+      "requestsCountActive_zero": "لا طلبات نشطة",
+      "requestsCountActive_one": "طلب نشط واحد",
+      "requestsCountActive_two": "طلبان نشطان",
+      "requestsCountActive_few": "{{count}} طلبات نشطة",
+      "requestsCountActive_many": "{{count}} طلباً نشطاً",
+      "requestsCountActive_other": "{{count}} طلب نشط"
+    },
+    "modal": {
+      "titleAdd": "مخبر جديد",
+      "titleEdit": "تعديل المخبر",
+      "name": "اسم المخبر",
+      "namePlaceholder": "أدخل اسم المخبر",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "مثال: +963944759214",
+      "address": "العنوان",
+      "addressPlaceholder": "الشارع، المدينة، أو العنوان الكامل",
+      "cancel": "إلغاء",
+      "submit": "إضافة المخبر",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر حفظ المخبر. حاول مرة أخرى.",
+      "validation": {
+        "name": "الاسم مطلوب.",
+        "phone": "رقم الهاتف مطلوب.",
+        "phoneInvalid": "أدخل رقماً صحيحاً (8 أرقام على الأقل).",
+        "address": "العنوان مطلوب."
+      }
+    }
+  },
+  "labRequests": {
+    "title": "طلبات المختبر",
+    "subtitle": "إدارة وعرض جميع طلبات المختبر",
+    "addButton": "طلب جديد",
+    "searchPlaceholder": "ابحث عن أي شيء...",
+    "searchAria": "البحث في طلبات المختبر",
+    "error": {
+      "load": "تعذر تحميل طلبات المختبر.",
+      "retry": "إعادة المحاولة"
+    },
+    "empty": "لا توجد طلبات مطابقة للبحث.",
+    "deleteConfirm": "حذف هذا الطلب ({{labName}} / {{patientName}})؟ لا يمكن التراجع.",
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "status": {
+      "delivered": "مُسلَّم",
+      "pending": "قيد الانتظار",
+      "canceled": "ملغي"
+    },
+    "table": {
+      "lab": "المخبر",
+      "patient": "المريض",
+      "workType": "نوع العمل",
+      "quantity": "الكمية",
+      "requestDate": "تاريخ الطلب",
+      "cost": "التكلفة",
+      "status": "الحالة",
+      "actions": "إجراءات",
+      "editAria": "تعديل الطلب",
+      "deleteAria": "حذف الطلب"
+    },
+    "modal": {
+      "titleAdd": "طلب جديد",
+      "titleEdit": "تعديل الطلب",
+      "lab": "اختر المخبر",
+      "labPlaceholder": "اختر مخبراً",
+      "patient": "اختر المريض",
+      "patientPlaceholder": "ابحث عن مريض",
+      "patientSearchPlaceholder": "بحث…",
+      "workType": "نوع العمل",
+      "workTypePlaceholder": "اختر نوع العمل",
+      "quantity": "الكمية",
+      "quantityPlaceholder": "أرقام فقط",
+      "cost": "التكلفة ($)",
+      "costPlaceholder": "أرقام فقط (دولار $)",
+      "requestDate": "تاريخ الطلب",
+      "notes": "ملاحظات",
+      "notesPlaceholder": "اكتب ملاحظات حول هذا الطلب",
+      "cancel": "إلغاء",
+      "submit": "إضافة الطلب",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر حفظ الطلب. حاول مرة أخرى.",
+      "validation": {
+        "lab": "يرجى اختيار مخبر.",
+        "patient": "يرجى اختيار مريض.",
+        "workType": "يرجى اختيار نوع العمل.",
+        "quantity": "أدخل كمية صحيحة (عدد صحيح ≥ 1).",
+        "cost": "أدخل تكلفة صحيحة أو اترك الحقل فارغاً.",
+        "notesMax": "الملاحظات 100 حرف كحد أقصى.",
+        "requestDate": "اختر تاريخاً."
+      }
+    }
+  },
+  "doctors": {
+    "title": "الأطباء",
+    "subtitle": "إدارة وعرض الأطباء",
+    "addButton": "إضافة طبيب",
+    "searchPlaceholder": "ابحث عن أي شيء...",
+    "searchAria": "البحث في الأطباء",
+    "error": {
+      "load": "تعذر تحميل الأطباء.",
+      "retry": "إعادة المحاولة"
+    },
+    "empty": "لا يوجد أطباء مطابقون للبحث.",
+    "deleteConfirm": "حذف الطبيب \"{{name}}\"؟ لا يمكن التراجع.",
+    "quota": {
+      "remaining_zero": "لا توجد أماكن متاحة للأطباء",
+      "remaining_one": "يتبقى طبيب واحد",
+      "remaining_two": "يتبقى طبيبان",
+      "remaining_few": "يتبقى {{count}} أطباء",
+      "remaining_many": "يتبقى {{count}} طبيباً",
+      "remaining_other": "يتبقى {{count}} طبيب"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "table": {
+      "doctor": "الطبيب",
+      "phone": "رقم الهاتف",
+      "treatments": "العلاجات",
+      "revenue": "الإيرادات",
+      "outstanding": "المدفوعات المستحقة",
+      "actions": "إجراءات",
+      "thisMonth": "هذا الشهر",
+      "editAria": "تعديل الطبيب",
+      "deleteAria": "حذف الطبيب"
+    },
+    "wizard": {
+      "titleStep1": "ملف الطبيب",
+      "titleStep2": "معلومات الطبيب",
+      "titleEdit": "تعديل الطبيب",
+      "username": "اسم المستخدم",
+      "usernamePlaceholder": "مثال: dr.smith",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "8 أحرف على الأقل",
+      "cancel": "إلغاء",
+      "next": "التالي",
+      "back": "رجوع",
+      "firstName": "الاسم الأول",
+      "firstNamePlaceholder": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "lastNamePlaceholder": "اسم العائلة",
+      "specialty": "التخصص",
+      "specialtyPlaceholder": "اختر التخصص",
+      "phone": "الهاتف",
+      "commission": "نسبة العمولة (%)",
+      "commissionPlaceholder": "0–100",
+      "certificate": "رقم الشهادة (اختياري)",
+      "certificatePlaceholder": "رقم الرخصة أو الشهادة",
+      "save": "حفظ",
+      "submit": "إضافة الطبيب",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر حفظ بيانات الطبيب. حاول مرة أخرى.",
+      "validation": {
+        "username": "اسم المستخدم مطلوب.",
+        "password": "كلمة المرور يجب أن تكون 8 أحرف على الأقل.",
+        "firstName": "الاسم الأول مطلوب.",
+        "lastName": "اسم العائلة مطلوب.",
+        "specialty": "اختر تخصصاً.",
+        "phone": "رقم الهاتف مطلوب.",
+        "commission": "أدخل نسبة عمولة صحيحة بين 0 و 100."
+      }
+    },
+    "detail": {
+      "back": "العودة إلى الأطباء",
+      "edit": "تعديل",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "registered": "تاريخ التسجيل",
+      "error": "تعذر تحميل بيانات هذا الطبيب.",
+      "paymentDeleteConfirm": "حذف الدفعة {{id}}؟",
+      "paymentsTitle": "سجل المدفوعات",
+      "recordPayment": "تسجيل دفعة",
+      "treatmentsTitle": "العلاجات",
+      "editPayment": "تعديل الدفعة",
+      "deletePayment": "حذف الدفعة",
+      "stats": {
+        "treatments": "إجمالي العلاجات",
+        "revenue": "إجمالي الإيرادات",
+        "outstanding": "المدفوعات المستحقة",
+        "remaining": "المدفوعات المتبقية"
+      },
+      "tabs": {
+        "payments": "المدفوعات",
+        "treatments": "العلاجات"
+      },
+      "paymentTable": {
+        "id": "رقم الدفعة",
+        "date": "التاريخ",
+        "amount": "المبلغ",
+        "method": "طريقة الدفع",
+        "actions": "إجراءات"
+      },
+      "treatmentTable": {
+        "date": "التاريخ",
+        "type": "العلاج",
+        "tooth": "السن / المنطقة",
+        "patient": "المريض",
+        "price": "السعر",
+        "paid": "المدفوع",
+        "remaining": "المتبقي"
+      }
+    },
+    "paymentModal": {
+      "title": "دفعة",
+      "date": "التاريخ",
+      "amount": "المبلغ",
+      "amountPlaceholder": "0.00",
+      "method": "طريقة الدفع (اختياري)",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "validation": {
+        "date": "اختر تاريخاً.",
+        "amount": "أدخل مبلغاً صحيحاً."
+      }
+    }
+  },
+  "secretaries": {
+    "title": "السكرتارية",
+    "subtitle": "إدارة وعرض السكرتارية",
+    "addNurse": "إضافة ممرضة",
+    "searchPlaceholder": "ابحث عن أي شيء...",
+    "searchAria": "البحث في السكرتارية",
+    "error": {
+      "load": "تعذر تحميل بيانات السكرتارية.",
+      "retry": "إعادة المحاولة"
+    },
+    "empty": "لا يوجد سكرتير مطابق للبحث.",
+    "deleteConfirm": "حذف السكرتير \"{{name}}\"؟ لا يمكن التراجع.",
+    "quota": {
+      "remaining_zero": "لا توجد أماكن متاحة للسكرتارية",
+      "remaining_one": "يتبقى سكرتير واحد",
+      "remaining_two": "يتبقى سكرتيران",
+      "remaining_few": "يتبقى {{count}} سكرتيرين",
+      "remaining_many": "يتبقى {{count}} سكرتيراً",
+      "remaining_other": "يتبقى {{count}} سكرتير"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "table": {
+      "name": "الاسم",
+      "phone": "رقم الهاتف",
+      "username": "اسم المستخدم",
+      "password": "كلمة المرور",
+      "actions": "إجراءات",
+      "editAria": "تعديل السكرتير",
+      "deleteAria": "حذف السكرتير"
+    },
+    "wizard": {
+      "titleStep1": "ملف الممرضة",
+      "titleStep2": "معلومات السكرتير",
+      "titleEdit": "تعديل السكرتير",
+      "username": "اسم المستخدم",
+      "usernamePlaceholder": "أدخل اسم المستخدم",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "8 أحرف على الأقل",
+      "cancel": "إلغاء",
+      "next": "التالي",
+      "back": "رجوع",
+      "firstName": "الاسم الأول",
+      "firstNamePlaceholder": "أدخل الاسم الأول",
+      "lastName": "اسم العائلة",
+      "lastNamePlaceholder": "أدخل اسم العائلة",
+      "phone": "رقم الهاتف",
+      "phonePlaceholder": "مثال: +963944759214",
+      "salary": "الراتب",
+      "salaryPlaceholder": "أرقام فقط (دولار $)",
+      "save": "حفظ",
+      "submit": "إضافة ممرضة",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر حفظ بيانات السكرتير. حاول مرة أخرى.",
+      "validation": {
+        "username": "اسم المستخدم مطلوب.",
+        "password": "كلمة المرور يجب أن تكون 8 أحرف على الأقل.",
+        "firstName": "الاسم الأول مطلوب.",
+        "lastName": "اسم العائلة مطلوب.",
+        "phone": "رقم الهاتف مطلوب.",
+        "salary": "أدخل راتباً صحيحاً."
+      }
+    }
+  },
+  "expenses": {
+    "title": "المصاريف",
+    "subtitle": "تتبع وإدارة مصاريف العيادة",
+    "addButton": "إضافة مصروف",
+    "searchPlaceholder": "ابحث عن أي شيء...",
+    "searchAria": "البحث في المصاريف",
+    "error": {
+      "load": "تعذر تحميل المصاريف.",
+      "retry": "إعادة المحاولة"
+    },
+    "empty": "لا توجد مصاريف مطابقة للمرشحات.",
+    "deleteConfirm": "حذف المصروف \"{{title}}\"؟ لا يمكن التراجع.",
+    "summary": {
+      "labPayments": "دفعات المختبر",
+      "totalExpenses": "إجمالي المصاريف",
+      "doctorPayments": "دفعات الأطباء",
+      "others": "أخرى"
+    },
+    "filters": {
+      "all": "الكل",
+      "labs": "المختبرات",
+      "doctors": "الأطباء",
+      "others": "أخرى"
+    },
+    "categories": {
+      "labs": "مختبرات",
+      "doctors": "أطباء",
+      "others": "أخرى"
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "table": {
+      "date": "التاريخ",
+      "title": "العنوان",
+      "category": "الفئة",
+      "description": "الوصف",
+      "amount": "المبلغ",
+      "actions": "إجراءات",
+      "editAria": "تعديل المصروف",
+      "deleteAria": "حذف المصروف"
+    },
+    "modal": {
+      "titleAdd": "مصروف جديد",
+      "titleEdit": "تعديل المصروف",
+      "title": "العنوان",
+      "titlePlaceholder": "أدخل عنوان المصروف",
+      "category": "الفئة",
+      "categoryPlaceholder": "اختر فئة",
+      "amount": "المبلغ",
+      "amountPlaceholder": "أرقام فقط (دولار $)",
+      "date": "التاريخ",
+      "description": "الوصف",
+      "descriptionPlaceholder": "اكتب ملاحظات حول هذا المصروف",
+      "cancel": "إلغاء",
+      "submit": "إضافة المصروف",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "submitError": "تعذر حفظ المصروف. حاول مرة أخرى.",
+      "validation": {
+        "title": "العنوان مطلوب.",
+        "category": "اختر فئة.",
+        "amount": "أدخل مبلغاً صحيحاً.",
+        "date": "اختر تاريخاً.",
+        "descriptionMax": "الوصف 100 حرف كحد أقصى."
+      }
+    }
+  },
+  "reports": {
+    "title": "التقارير",
+    "subtitle": "عرض تقارير عن عياداتك.",
+    "filters": {
+      "period": "الفترة",
+      "clinic": "العيادة",
+      "clinicPlaceholder": "اختر عيادة"
+    },
+    "period": {
+      "weekly": "أسبوعي",
+      "monthly": "شهري",
+      "yearly": "سنوي"
+    },
+    "stats": {
+      "totalRevenue": "إجمالي الإيرادات",
+      "totalExpenses": "إجمالي المصاريف",
+      "netProfit": "صافي الربح",
+      "profitMargins": "هوامش الربح"
+    },
+    "expensesBreakdownTitle": "تفصيل المصاريف",
+    "chartTitle": "الإيرادات مقابل المصاريف",
+    "emptyBreakdown": "لا توجد بيانات مصاريف لهذه الفترة.",
+    "emptyChart": "لا توجد بيانات رسم لهذه الفترة.",
+    "error": {
+      "load": "تعذر تحميل التقارير.",
+      "chart": "تعذر تحميل بيانات الرسم.",
+      "retry": "إعادة المحاولة"
+    }
+  },
+  "patients": {
+    "list": {
+      "title": "المرضى",
+      "subtitle": "إدارة وعرض جميع سجلات المرضى.",
+      "addPatient": "إضافة مريض",
+      "searchPlaceholder": "ابحث عن أي شيء…",
+      "searchAria": "بحث في المرضى",
+      "error": "تعذر تحميل المرضى.",
+      "retry": "إعادة المحاولة",
+      "empty": "لا يوجد مرضى.",
+      "showing": "عرض {{from}}–{{to}} من {{total}}",
+      "prev": "السابق",
+      "next": "التالي",
+      "paginationAria": "ترقيم صفحات قائمة المرضى",
+      "pageAria": "الانتقال إلى الصفحة {{page}}",
+      "deleteConfirmTitle": "حذف المريض؟",
+      "deleteConfirmDescription": "سيتم إزالة المريض من هذه العيادة. لا يمكن التراجع عن هذا الإجراء.",
+      "deleteConfirmCancel": "إلغاء",
+      "deleteConfirmAction": "حذف",
+      "deleteConfirmLoading": "جاري الحذف…",
+      "deleteError": "تعذر حذف هذا المريض. حاول مرة أخرى."
+    },
+    "table": {
+      "patientId": "معرّف المريض",
+      "nameAndGender": "الاسم والجنس",
+      "age": "العمر",
+      "name": "الاسم",
+      "id": "المعرّف",
+      "phone": "رقم الهاتف",
+      "email": "البريد",
+      "lastVisit": "آخر زيارة",
+      "nextVisit": "الزيارة القادمة",
+      "actions": "إجراءات",
+      "view": "عرض",
+      "viewProfile": "عرض ملف المريض",
+      "openAppointments": "فتح مواعيد المريض",
+      "editPatient": "تعديل المريض",
+      "deletePatient": "حذف المريض"
+    },
+    "gender": {
+      "male": "ذكر",
+      "female": "أنثى",
+      "other": "آخر"
+    },
+    "addModal": {
+      "title": "مريض جديد",
+      "sectionBasic": "المعلومات الأساسية",
+      "sectionDob": "تاريخ الميلاد",
+      "sectionFiles": "الملفات (اختياري)",
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "firstNamePlaceholder": "الاسم الأول",
+      "lastNamePlaceholder": "اسم العائلة",
+      "gender": "الجنس",
+      "genderPlaceholder": "اختر الجنس…",
+      "bloodTypeOptional": "فصيلة الدم (اختياري)",
+      "bloodTypePlaceholder": "اختر الفصيلة…",
+      "bloodTypeSkip": "غير محدد",
+      "phoneNumber": "رقم الهاتف",
+      "phonePlaceholder": "رقم الهاتف",
+      "phone": "الهاتف",
+      "address": "العنوان",
+      "addressPlaceholder": "العنوان",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "birthYear": "سنة الميلاد",
+      "bloodType": "فصيلة الدم",
+      "dobDay": "اليوم",
+      "dobMonth": "الشهر",
+      "dobYear": "السنة",
+      "chooseDay": "اختر اليوم",
+      "chooseMonth": "اختر الشهر",
+      "chooseYear": "اختر السنة…",
+      "uploadTitle": "رفع صورة",
+      "uploadHint": "PNG أو JPG حتى 5 ميجابايت",
+      "uploadAria": "رفع صورة المريض",
+      "removeFile": "إزالة الصورة",
+      "fileErrorType": "يرجى رفع صورة بصيغة PNG أو JPG.",
+      "fileErrorSize": "يجب ألا يتجاوز حجم الصورة 5 ميجابايت.",
+      "cancel": "إلغاء",
+      "submit": "إضافة مريض",
+      "saving": "جاري الحفظ…",
+      "validation": {
+        "fullName": "أدخل اسماً أولاً واسم عائلة صالحين.",
+        "name": "أدخل اسماً صالحاً.",
+        "gender": "يرجى اختيار الجنس.",
+        "phone": "أدخل رقم هاتف صالحاً.",
+        "email": "أدخل بريداً صالحاً.",
+        "birthYear": "أدخل سنة ميلاد صالحة.",
+        "birthYearMax": "سنة الميلاد لا يمكن أن تكون في المستقبل.",
+        "address": "أدخل العنوان.",
+        "bloodType": "فصيلة الدم مطلوبة.",
+        "dobIncomplete": "اختر اليوم والشهر والسنة.",
+        "dobInvalid": "أدخل تاريخ ميلاد صالحاً."
+      }
+    },
+    "profile": {
+      "back": "العودة إلى المرضى",
+      "error": "تعذر تحميل بيانات هذا المريض.",
+      "idLabel": "المعرّف : #{{id}}",
+      "idCode": "#{{code}}",
+      "edit": "تعديل",
+      "share": "مشاركة",
+      "shareDialog": {
+        "title": "رابط ملخص للمريض",
+        "description": "شارك هذا الرابط مع المريض. يفتح صفحة ملخص للقراءة فقط (أرصدة ومواعيد تجريبية) دون تسجيل الدخول إلى العيادة.",
+        "urlLabel": "رابط بوابة المريض",
+        "copyAgain": "نسخ مرة أخرى",
+        "done": "تم",
+        "copySuccess": "تم نسخ الرابط إلى الحافظة.",
+        "copyFailed": "تعذر النسخ تلقائياً. حدّد الرابط أعلاه وانسخه يدوياً."
+      },
+      "gender": "الجنس",
+      "bloodType": "فصيلة الدم",
+      "age": "العمر",
+      "ageYears": "{{count}} سنة",
+      "contactTitle": "معلومات الاتصال",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "address": "العنوان",
+      "activitiesTitle": "النشاطات الأخيرة",
+      "lastVisit": "آخر زيارة",
+      "nextVisit": "الزيارة القادمة",
+      "filesTitle": "الملفات",
+      "noFiles": "لا توجد ملفات.",
+      "uploadFileTitle": "رفع ملف",
+      "uploadFileHint": "PNG أو JPG حتى 5 ميجابايت",
+      "uploadFileAria": "رفع ملف المريض",
+      "uploaded": "تاريخ الرفع: {{date}}",
+      "deleteFile": "حذف",
+      "openFile": "فتح الملف"
+    },
+    "tabs": {
+      "appointments": "المواعيد",
+      "invoices": "الفواتير",
+      "dental": "مخطط الأسنان",
+      "treatments": "العلاجات",
+      "clinical": "التاريخ الطبي"
+    },
+    "appointments": {
+      "title": "المواعيد",
+      "empty": "لا توجد مواعيد.",
+      "columns": {
+        "date": "التاريخ",
+        "time": "الوقت",
+        "doctor": "الطبيب",
+        "treatment": "العلاج",
+        "actions": "إجراءات",
+        "status": "الحالة",
+        "notes": "ملاحظات"
+      },
+      "editAppointment": "تعديل الموعد",
+      "editNotAvailable": "تعديل المواعيد غير متاح حالياً.",
+      "deleteAppointment": "حذف الموعد",
+      "deleteConfirmTitle": "حذف الموعد؟",
+      "deleteConfirmDescription": "سيتم إزالة الموعد من سجل هذا المريض.",
+      "deleteConfirmCancel": "إلغاء",
+      "deleteConfirmAction": "حذف",
+      "deleteConfirmLoading": "جاري الحذف…",
+      "deleteError": "تعذر حذف هذا الموعد. حاول مرة أخرى.",
+      "status": {
+        "scheduled": "مجدول",
+        "completed": "مكتمل",
+        "cancelled": "ملغي"
+      }
+    },
+    "invoices": {
+      "title": "الفواتير",
+      "addInvoice": "إضافة فاتورة",
+      "addModalTitle": "إضافة فاتورة",
+      "addModalPatient": "المريض",
+      "addModalTreatment": "نوع العلاج",
+      "addModalSubmit": "إضافة فاتورة",
+      "addModalSaving": "جاري الحفظ…",
+      "editInvoice": "تعديل الفاتورة",
+      "empty": "لا توجد فواتير لهذا المريض.",
+      "summary": {
+        "total": "الإجمالي",
+        "paid": "المدفوع",
+        "remaining": "المتبقي",
+        "totalInvoiced": "إجمالي الفواتير",
+        "totalPaid": "إجمالي المدفوع",
+        "totalRemaining": "إجمالي المتبقي"
+      },
+      "columns": {
+        "invoiceId": "رقم الفاتورة",
+        "invoice": "العلاج",
+        "date": "التاريخ",
+        "treatment": "نوع العلاج",
+        "total": "الإجمالي",
+        "notes": "ملاحظات",
+        "price": "السعر",
+        "paid": "المدفوع",
+        "remaining": "المتبقي",
+        "status": "الحالة",
+        "actions": "إجراءات"
+      }
+    },
+    "dental": {
+      "title": "مخطط الأسنان",
+      "modeLabel": "وضع المخطط",
+      "modeAdult": "بالغ (32 سناً)",
+      "modeChild": "طفل (20 سناً)",
+      "upperJaw": "الفك العلوي",
+      "lowerJaw": "الفك السفلي",
+      "legendTitle": "مفتاح الحالات",
+      "status": {
+        "natural": "طبيعي",
+        "filling": "حشوة",
+        "extracted": "مقلوع",
+        "crown": "تاج",
+        "implant": "زرعة",
+        "decay": "نخر",
+        "previous": "حشوة / تاج سابق"
+      },
+      "choosePart": "اختر جزءاً",
+      "choosePartHint": "انقر على الأجزاء لتحديدها.",
+      "selectAll": "تحديد الكل",
+      "surfaces": {
+        "buccal": "وجهي",
+        "mesial": "قريب",
+        "distal": "بعيد",
+        "occlusal": "ماضغ",
+        "lingual": "لساني"
+      },
+      "canalsTitle": "قنوات السن",
+      "canalName": "الاسم",
+      "canalLength": "الطول",
+      "addCanal": "+ إضافة",
+      "cancel": "إلغاء",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "toothTitle": "سن {{id}}",
+      "modalHistoryEmpty": "لا توجد علاجات مسجلة لهذا السن.",
+      "modalHistoryBack": "رجوع",
+      "modalFormBack": "رجوع",
+      "addTreatment": "إضافة علاج",
+      "next": "التالي",
+      "tableDate": "التاريخ",
+      "tableTreatment": "العلاج",
+      "tableNote": "ملاحظة",
+      "tablePrice": "السعر",
+      "tablePaid": "المدفوع",
+      "tableRemaining": "المتبقي",
+      "chooseCategory": "اختر الفئة",
+      "chooseTreatment": "اختر العلاج",
+      "priceOptional": "سعر العلاج (اختياري)",
+      "paidOptional": "المبلغ المدفوع (اختياري)",
+      "pricePlaceholder": "أرقام فقط (دولار $)",
+      "paidPlaceholder": "أرقام فقط (دولار $)",
+      "notesPlaceholder": "اكتب ملاحظات عن هذا العلاج",
+      "notesCharCount": "{{current}}/{{max}}",
+      "notesMax": "يجب ألا تتجاوز الملاحظات 100 حرف.",
+      "validationNumericOptional": "استخدم أرقاماً فقط (حقل اختياري).",
+      "demoCategory": {
+        "restorative": "ترميمي",
+        "preventive": "وقائي"
+      },
+      "demoTreatment": {
+        "composite": "حشوة مركبة",
+        "crown": "تاج"
+      }
+    },
+    "treatments": {
+      "title": "العلاجات",
+      "empty": "لا توجد علاجات.",
+      "columns": {
+        "type": "نوع العلاج",
+        "tooth": "السن / المنطقة",
+        "date": "التاريخ",
+        "notes": "ملاحظات",
+        "price": "السعر",
+        "paid": "المدفوع",
+        "remaining": "المتبقي"
+      },
+      "stagesTitle": "المراحل",
+      "newStage": "+ مرحلة جديدة",
+      "stageLabel": "المرحلة {{n}}",
+      "expand": "توسيع الصف",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "newStageTitle": "مرحلة جديدة",
+      "stage": {
+        "noteLabel": "ملاحظة",
+        "notePlaceholder": "اكتب ملاحظات عن مرحلة هذا العلاج",
+        "charCount": "{{current}}/{{max}}",
+        "validation": "أدخل ملاحظة (100 حرف كحد أقصى).",
+        "back": "رجوع",
+        "confirm": "تأكيد",
+        "saving": "جاري الحفظ…"
+      }
+    },
+    "clinicalHistory": {
+      "title": "التاريخ الطبي",
+      "addCta": "+ إضافة تاريخ طبي",
+      "edit": "تعديل",
+      "notProvided": "—",
+      "diseasesQuestion": "هل لديك أي من هذه الأمراض؟",
+      "charCount": "{{current}}/{{max}}",
+      "placeholders": {
+        "otherDiseases": "أدخل أمراضاً أخرى",
+        "medicines": "أدخل الأدوية",
+        "allergies": "أدخل الحساسيات",
+        "surgeries": "أدخل العمليات"
+      },
+      "sectionOthers": "أخرى",
+      "wizardTitle": "التاريخ الطبي",
+      "cancel": "إلغاء",
+      "back": "رجوع",
+      "next": "التالي",
+      "save": "حفظ",
+      "saving": "جاري الحفظ…",
+      "yes": "نعم",
+      "no": "لا",
+      "otherDiseases": "أمراض أخرى",
+      "medicinesQuestion": "هل تتناول أدوية بانتظام؟",
+      "medicinesLabel": "الأدوية",
+      "allergiesQuestion": "هل لديك حساسية دوائية؟",
+      "allergiesLabel": "الحساسية",
+      "surgeryQuestion": "هل أجريتَ أي عملية سابقة؟",
+      "surgeriesLabel": "العمليات",
+      "pregnantQuestion": "هل أنتِ حامل؟",
+      "smokeQuestion": "هل تدخن؟",
+      "alcoholQuestion": "هل تشرب الكحول؟",
+      "reviewTitle": "مراجعة",
+      "reviewDiseases": "الأمراض المحددة: {{count}}",
+      "reviewMedicines": "أدوية بانتظام: {{v}}",
+      "sectionDiseases": "الأمراض",
+      "sectionMedicines": "الأدوية",
+      "sectionAllergies": "الحساسية",
+      "sectionSurgeries": "العمليات",
+      "sectionLifestyle": "نمط الحياة",
+      "pregnantShort": "حمل",
+      "smokeShort": "تدخين",
+      "alcoholShort": "كحول",
+      "diseases": {
+        "d1": "حالة 1",
+        "d2": "حالة 2",
+        "d3": "حالة 3",
+        "d4": "حالة 4",
+        "d5": "حالة 5",
+        "d6": "حالة 6",
+        "d7": "حالة 7",
+        "d8": "حالة 8",
+        "d9": "حالة 9",
+        "d10": "حالة 10"
+      }
+    },
+    "edit": {
+      "title": "تعديل المريض",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "address": "العنوان",
+      "lastVisit": "آخر زيارة",
+      "nextVisit": "الزيارة القادمة",
+      "cancel": "إلغاء",
+      "save": "حفظ التغييرات",
+      "saving": "جاري الحفظ…",
+      "validation": {
+        "name": "الاسم مطلوب.",
+        "email": "بريد صالح مطلوب.",
+        "phone": "الهاتف مطلوب.",
+        "address": "العنوان مطلوب.",
+        "date": "التاريخ مطلوب."
+      }
+    }
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "إدارة معلومات العيادة والإعدادات",
+    "error": {
+      "load": "تعذر تحميل الإعدادات. حاول مرة أخرى."
+    },
+    "tabs": {
+      "clinic": "معلومات العيادة",
+      "workDays": "أيام العمل",
+      "workHours": "ساعات العمل"
+    },
+    "clinic": {
+      "name": "الاسم",
+      "phone": "رقم الهاتف",
+      "address": "العنوان",
+      "logo": "شعار العيادة",
+      "noLogo": "لا يوجد شعار",
+      "editLogo": "تعديل"
+    },
+    "workDays": {
+      "sun": "الأحد",
+      "mon": "الإثنين",
+      "tue": "الثلاثاء",
+      "wed": "الأربعاء",
+      "thu": "الخميس",
+      "fri": "الجمعة",
+      "sat": "السبت"
+    },
+    "workHours": {
+      "start": "وقت البداية",
+      "end": "وقت النهاية"
+    },
+    "actions": {
+      "cancel": "إلغاء",
+      "save": "حفظ التغييرات",
+      "saving": "جاري الحفظ…"
+    },
+    "validation": {
+      "name": "الاسم مطلوب.",
+      "phone": "رقم الهاتف مطلوب.",
+      "address": "العنوان مطلوب.",
+      "startTime": "وقت البداية مطلوب.",
+      "endTime": "وقت النهاية مطلوب.",
+      "endAfterStart": "يجب أن يكون وقت النهاية بعد وقت البداية."
+    }
+  },
+  "auth": {
+    "login": {
+      "brand": "أسترو كلينيكس",
+      "subtitle": "نظام إدارة عيادات الأسنان",
+      "title": "مرحباً بعودتك",
+      "description": "سجل الدخول إلى حسابك",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "admin@example.com",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "********",
+      "portalLabel": "نوع البوابة",
+      "portalPlaceholder": "اختر نوع البوابة",
+      "portalClinic": "العيادة",
+      "portalAdmin": "الأدمن",
+      "submit": "تسجيل الدخول"
+    }
+  },
+  "admin": {
+    "brand": "أسترو كلينيكس",
+    "headerTitle": "لوحة تحكم الأدمن",
+    "logout": "تسجيل الخروج",
+    "nav": {
+      "statistics": "الإحصائيات",
+      "subscriptions": "الاشتراكات",
+      "users": "المستخدمون",
+      "billing": "خطط الدفع",
+      "labs": "إدارة المختبرات",
+      "clinics": "العيادات",
+      "products": "المنتجات",
+      "schedule": "الجدولة",
+      "staff": "الطاقم",
+      "settings": "الإعدادات"
+    },
+    "dashboard": {
+      "totalUsers": "إجمالي المستخدمين",
+      "activeUsers": "المستخدمون النشطون",
+      "clinicsCount": "عدد العيادات",
+      "totalSubscriptions": "إجمالي الاشتراكات",
+      "popularPlan": "أكثر خطة انتشاراً",
+      "totalRevenue": "إجمالي الإيرادات",
+      "topSellers": "أفضل البائعين",
+      "revenuePerMonth": "الإيرادات لكل شهر",
+      "topPlans": "أكثر الخطط مبيعاً",
+      "subscriptionLabel": "اشتراك",
+      "username": "اسم المستخدم",
+      "basicPlan": "الخطة الأساسية",
+      "proPlan": "الخطة الاحترافية",
+      "freeTrial": "نسخة تجريبية"
+    },
+    "subscriptions": {
+      "title": "الاشتراكات",
+      "subtitle": "إدارة الاشتراكات والمدفوعات",
+      "newSubscription": "اشتراك جديد",
+      "searchPlaceholder": "ابحث عن أي شيء...",
+      "filters": {
+        "all": "الكل",
+        "active": "نشط",
+        "expired": "منتهي"
+      },
+      "columns": {
+        "user": "المستخدم",
+        "planType": "نوع الخطة",
+        "startedAt": "تاريخ البدء",
+        "expiresAt": "تاريخ الانتهاء",
+        "remainingDays": "الأيام المتبقية",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "status": {
+        "active": "نشط",
+        "expired": "منتهي"
+      },
+      "actions": {
+        "suspend": "إيقاف",
+        "renew": "تجديد",
+        "edit": "تعديل",
+        "delete": "حذف"
+      },
+      "days": "يوم",
+      "pagination": {
+        "previous": "السابق",
+        "next": "التالي"
+      },
+      "modal": {
+        "title": "اشتراك جديد",
+        "userLabel": "اختر المستخدم",
+        "planLabel": "اختر الخطة",
+        "selectPlaceholder": "اختر ...",
+        "fromLabel": "من",
+        "toLabel": "إلى",
+        "datePlaceholder": "أدخل تاريخاً",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد الاشتراك"
+      }
+    },
+    "usersPage": {
+      "title": "المستخدمون",
+      "subtitle": "إدارة وعرض المستخدمين",
+      "newUser": "مستخدم جديد",
+      "searchPlaceholder": "ابحث عن أي شيء...",
+      "filterBy": "تصفية حسب",
+      "filters": {
+        "all": "الكل",
+        "active": "نشط",
+        "expired": "منتهي"
+      },
+      "columns": {
+        "user": "المستخدم",
+        "phoneNumber": "رقم الهاتف",
+        "clinics": "العيادات",
+        "subscriptions": "الاشتراكات",
+        "revenue": "الإيرادات",
+        "status": "الحالة",
+        "actions": "الإجراءات"
+      },
+      "status": {
+        "active": "نشط",
+        "expired": "منتهي"
+      },
+      "actions": {
+        "edit": "تعديل المستخدم",
+        "delete": "حذف المستخدم"
+      },
+      "pagination": {
+        "previous": "السابق",
+        "next": "التالي"
+      },
+      "modal": {
+        "title": "مستخدم جديد",
+        "userName": "اسم المستخدم",
+        "userNamePlaceholder": "أدخل اسماً",
+        "email": "البريد الإلكتروني",
+        "emailPlaceholder": "example@gmail.com",
+        "phone": "رقم الهاتف",
+        "phonePlaceholder": "+XXX-XXXXXXXXX",
+        "address": "العنوان",
+        "addressPlaceholder": "+XXX-XXXXXXXXX",
+        "cancel": "إلغاء",
+        "confirm": "إضافة مستخدم"
+      },
+      "details": {
+        "edit": "تعديل",
+        "stats": {
+          "numberOfClinics": "عدد العيادات",
+          "totalDoctors": "إجمالي الأطباء",
+          "totalSecretaries": "إجمالي السكرتارية",
+          "totalPatients": "إجمالي المرضى"
+        },
+        "dailyUsage": {
+          "title": "الاستخدام اليومي",
+          "subtitle": "عرض إحصائيات الاستخدام اليومية للمستخدم",
+          "appointments": "المواعيد",
+          "treatments": "العلاجات",
+          "labsRequests": "طلبات المخبر",
+          "patientsCreated": "المرضى المضافون",
+          "upDelta": "+5.9% عن الأمس",
+          "downDelta": "-5.9% عن الأمس"
+        },
+        "subscriptionsTitle": "الاشتراكات"
+      }
+    },
+    "billingPlans": {
+      "title": "خطط الدفع",
+      "subtitle": "إدارة وعرض خطط الدفع",
+      "newPlan": "خطة جديدة",
+      "actions": {
+        "edit": "تعديل",
+        "delete": "حذف"
+      },
+      "modal": {
+        "title": "خطة جديدة",
+        "planName": "اسم الخطة",
+        "planNamePlaceholder": "أدخل اسماً",
+        "price": "السعر",
+        "pricePlaceholder": "أرقام فقط (USD $)",
+        "duration": "المدة",
+        "durationPlaceholder": "أدخل المدة",
+        "feature1": "الميزة 1",
+        "feature2": "الميزة 2",
+        "featurePlaceholder": "أدخل ميزة",
+        "moreFeatures": "مزايا إضافية",
+        "cancel": "إلغاء",
+        "confirm": "إضافة خطة"
+      }
+    },
+    "labsManagement": {
+      "title": "إدارة المخابر",
+      "subtitle": "إدارة وعرض جميع المخابر",
+      "addLab": "إضافة مخبر",
+      "searchPlaceholder": "ابحث عن أي شيء...",
+      "columns": {
+        "lab": "المخبر",
+        "phoneNumber": "رقم الهاتف",
+        "totalRequests": "إجمالي الطلبات",
+        "usedBy": "مستخدم من",
+        "actions": "الإجراءات"
+      },
+      "actions": {
+        "edit": "تعديل المخبر",
+        "delete": "حذف المخبر"
+      },
+      "pagination": {
+        "previous": "السابق",
+        "next": "التالي"
+      },
+      "modal": {
+        "title": "مخبر جديد",
+        "laboratoryName": "اسم المخبر",
+        "phoneNumber": "رقم الهاتف",
+        "address": "العنوان",
+        "placeholder": "admin@example.com",
+        "cancel": "إلغاء",
+        "confirm": "إضافة مخبر"
+      }
+    }
+  }
+}

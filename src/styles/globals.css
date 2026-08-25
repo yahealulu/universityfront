@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1a3c5e;
+  --color-primary-light: #2d5f8a;
+  --color-accent: #3b82f6;
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  --color-chart-revenue: #1e40af;
+  --color-chart-expenses: #f97316;
+  --color-header-bg: #f0f4f8;
+  --color-header-title: #1e293b;
+}
+
+@layer base {
+  body {
+    @apply bg-page font-sans text-foreground antialiased;
+  }
+}
+
+@layer utilities {
+  .overflow-x-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@layer components {
+  .route-section-enter {
+    animation: routeSectionEnter 220ms ease-out both;
+    will-change: opacity, transform;
+  }
+
+  .locale-switch-enter {
+    animation: localeSwitchEnter 240ms ease-out both;
+  }
+
+  .modal-overlay[data-state='open'] {
+    animation: modalOverlayIn 180ms ease-out forwards;
+  }
+
+  .modal-overlay[data-state='closed'] {
+    animation: modalOverlayOut 150ms ease-in forwards;
+  }
+
+  .modal-content[data-state='open'] {
+    animation: modalContentIn 220ms ease-out forwards;
+    will-change: opacity, transform;
+  }
+
+  .modal-content[data-state='closed'] {
+    animation: modalContentOut 170ms ease-in forwards;
+    will-change: opacity, transform;
+  }
+
+  .account-popover-content[data-state='open'] {
+    animation: accountPopoverIn 180ms ease-out forwards;
+    transform-origin: top center;
+    will-change: opacity, transform;
+  }
+
+  .account-popover-content[data-state='closed'] {
+    animation: accountPopoverOut 140ms ease-in forwards;
+    transform-origin: top center;
+    will-change: opacity, transform;
+  }
+
+  .clinic-switcher-popover[data-state='open'] {
+    animation: accountPopoverIn 180ms ease-out forwards;
+    transform-origin: top left;
+    will-change: opacity, transform;
+  }
+
+  .clinic-switcher-popover[data-state='closed'] {
+    animation: accountPopoverOut 140ms ease-in forwards;
+    transform-origin: top left;
+    will-change: opacity, transform;
+  }
+}
+
+@keyframes routeSectionEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes localeSwitchEnter {
+  from {
+    opacity: 0.94;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalOverlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalOverlayOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modalContentIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 10px)) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes modalContentOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 6px)) scale(0.98);
+  }
+}
+
+@keyframes accountPopoverIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes accountPopoverOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-section-enter {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+
+  .locale-switch-enter,
+  .modal-overlay[data-state='open'],
+  .modal-overlay[data-state='closed'],
+  .modal-content[data-state='open'],
+  .modal-content[data-state='closed'],
+  .account-popover-content[data-state='open'],
+  .account-popover-content[data-state='closed'],
+  .clinic-switcher-popover[data-state='open'],
+  .clinic-switcher-popover[data-state='closed'] {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+}

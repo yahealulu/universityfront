@@ -1,0 +1,1380 @@
+{
+  "app": {
+    "name": "Astro Clinics",
+    "clinicNamePlaceholder": "Clinic Name",
+    "userMenu": "User account",
+    "user": {
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "logout": "Logout"
+    },
+    "language": {
+      "switchToAr": "Switch language to Arabic",
+      "switchToEn": "Switch language to English"
+    },
+    "sidebar": {
+      "collapse": "Collapse sidebar",
+      "expand": "Expand sidebar"
+    },
+    "mobileNav": {
+      "openMenu": "Open navigation menu",
+      "sheetTitle": "Main navigation",
+      "adminSheetTitle": "Admin navigation"
+    }
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "patients": "Patients",
+    "appointments": "Appointments",
+    "invoice": "Invoice",
+    "labsManagement": "Labs Management",
+    "labsRequests": "Labs Requests",
+    "doctors": "Doctors",
+    "secretaries": "Secretaries",
+    "expenses": "Expenses",
+    "reports": "Reports",
+    "settings": "Settings"
+  },
+  "clinics": {
+    "switcher": {
+      "triggerAria": "Open clinic switcher",
+      "title": "My Clinics",
+      "subtitle": "View and Manage Your Clinics",
+      "addClinic": "+ Add Clinic",
+      "loading": "Loading clinics…"
+    },
+    "newWizard": {
+      "title": "New Clinic",
+      "cancel": "Cancel",
+      "back": "Back",
+      "next": "Next",
+      "save": "Save",
+      "saving": "Saving…",
+      "step1": {
+        "heading": "Create Your Clinic",
+        "subheading": "Set Up Your Dental Clinic !",
+        "nameLabel": "Clinic Name",
+        "namePlaceholder": "Your Clinic Name Goes Here",
+        "phoneLabel": "Clinic Number",
+        "phonePlaceholder": "XXXXXXXXX",
+        "phonePrefix": "+963 -",
+        "addressLabel": "Address",
+        "addressPlaceholder": "123 Main Street",
+        "logoLabel": "Clinic Logo",
+        "logoHint": "Click To Upload Image Or Drag & Drop",
+        "logoSubhint": "PNG, JPG Up To 5MB",
+        "logoErrorType": "Please upload a PNG or JPG image.",
+        "logoErrorSize": "Image must be 5MB or smaller."
+      },
+      "step2": {
+        "heading": "Work Days",
+        "subheading": "Set Up Your Working Days!"
+      },
+      "step3": {
+        "heading": "Work Hours",
+        "subheading": "Set Up Your Working Hours!",
+        "startLabel": "Start Time",
+        "endLabel": "End Time"
+      },
+      "days": {
+        "saturday": "Saturday",
+        "sunday": "Sunday",
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesday",
+        "thursday": "Thursday",
+        "friday": "Friday"
+      },
+      "validation": {
+        "name": "Clinic name is required.",
+        "phone": "Phone is required.",
+        "address": "Address is required.",
+        "workDays": "Select at least one work day.",
+        "startTime": "Start time is required.",
+        "endTime": "End time is required."
+      }
+    }
+  },
+  "dashboard": {
+    "stats": {
+      "totalRevenue": "Total Revenue",
+      "totalExpenses": "Total Expenses",
+      "netProfit": "Net Profit",
+      "profitMargins": "Profit Margins",
+      "deltaVersusLastMonth": "Than Last Month"
+    },
+    "topDoctors": {
+      "title": "Top Performing Doctors",
+      "treatments_one": "{{count}} Treatment",
+      "treatments_other": "{{count}} Treatments",
+      "empty": "No doctors to display",
+      "error": "Could not load top doctors",
+      "retry": "Retry"
+    },
+    "appointments": {
+      "title": "Today's Appointments",
+      "patientId": "ID : {{id}}",
+      "empty": "No appointments scheduled for today",
+      "error": "Could not load appointments",
+      "retry": "Retry"
+    },
+    "expenses": {
+      "title": "Expenses Breakdown",
+      "empty": "No expense data",
+      "error": "Could not load expenses",
+      "retry": "Retry"
+    },
+    "chart": {
+      "title": "Revenue vs Expenses",
+      "revenue": "Revenue",
+      "expenses": "Expenses",
+      "error": "Could not load chart data",
+      "retry": "Retry",
+      "fallbackTitle": "Chart unavailable"
+    },
+    "error": {
+      "section": "Something went wrong in this section.",
+      "page": "Something went wrong loading the dashboard.",
+      "retry": "Try again"
+    },
+    "loading": "Loading…",
+    "expenseCategories": {
+      "ec-doctors": "Doctors",
+      "ec-labs": "Labs",
+      "ec-supplies": "Supplies",
+      "ec-rents": "Rents",
+      "ec-general": "General",
+      "ec-others": "Others"
+    }
+  },
+  "common": {
+    "percent": "{{value}}%",
+    "comingSoon": "This section is coming soon.",
+    "close": "Close"
+  },
+  "patientPortal": {
+    "clinicName": "Astro Clinics Dental",
+    "title": "Your care summary",
+    "subtitle": "A friendly overview of your balance and visits—share this page with family if you need help planning care.",
+    "patientLabel": "Patient",
+    "recordId": "Record: {{code}}",
+    "fallbackName": "Patient {{code}}",
+    "phoneDisplay": "+963 {{digits}}",
+    "balanceSectionTitle": "Balance overview",
+    "balanceSectionHint": "Figures below are demo-style totals to illustrate what you may owe or have paid; confirm with reception for official amounts.",
+    "stats": {
+      "totalInvoiced": "Total invoiced",
+      "totalPaid": "Paid to date",
+      "totalRemaining": "Remaining balance"
+    },
+    "nextDueLabel": "Next suggested follow-up:",
+    "appointmentsTitle": "Your appointments",
+    "footerDisclaimer": "This is a simplified patient-facing summary. It is not a legal invoice. Call the clinic for receipts, changes, or urgent care.",
+    "mock": {
+      "doctors": {
+        "0": "Dr. Sarah Al-Masri — General dentistry",
+        "1": "Dr. James Okonkwo — Endodontics",
+        "2": "Dr. Layla Haddad — Orthodontics",
+        "3": "Dr. Marco Rossi — Oral surgery",
+        "4": "Dr. Emily Chen — Periodontics",
+        "5": "Dr. Omar Farouk — Prosthodontics"
+      },
+      "treatments": {
+        "0": "Routine cleaning & polish",
+        "1": "Composite filling (posterior)",
+        "2": "Root canal therapy — molar",
+        "3": "Crown preparation & temporary",
+        "4": "Whitening session (in-office)",
+        "5": "Implant consultation",
+        "6": "Periodontal maintenance",
+        "7": "Braces adjustment"
+      },
+      "notes": {
+        "0": "Please arrive 10 minutes early to update your medical history.",
+        "1": "Bring any previous X-rays on a USB drive if available.",
+        "2": "Light meal recommended before longer procedures.",
+        "3": "Parking is available behind the clinic entrance.",
+        "4": "If you need to reschedule, call us at least 24 hours ahead."
+      }
+    }
+  },
+  "appointments": {
+    "title": "Appointments",
+    "subtitle": "Manage Clinic Appointments Schedule",
+    "error": {
+      "load": "Could not load the schedule.",
+      "retry": "Retry"
+    },
+    "toolbar": {
+      "prevDay": "Previous day",
+      "nextDay": "Next day",
+      "searchPlaceholder": "Search For Anything...",
+      "searchAria": "Search appointments"
+    },
+    "grid": {
+      "time": "Time",
+      "addAria": "Add appointment with {{doctor}} at {{time}}"
+    },
+    "card": {
+      "patientId": "ID: {{id}}",
+      "durationMin": "{{count}} Min"
+    },
+    "modal": {
+      "title": "New Appointment",
+      "doctor": "Doctor",
+      "doctorPlaceholder": "Choose a Doctor ...",
+      "patient": "Patient",
+      "patientPlaceholder": "Search For A Patient ...",
+      "patientSearchPlaceholder": "Search...",
+      "treatment": "Treatment Type (Optional)",
+      "treatmentPlaceholder": "Choose a ...",
+      "treatmentNone": "None",
+      "duration": "Duration",
+      "durationMinutes": {
+        "30": "30 Minutes",
+        "60": "60 Minutes",
+        "90": "90 Minutes",
+        "120": "120 Minutes"
+      },
+      "cancel": "Cancel",
+      "submit": "Add Request",
+      "saving": "Saving…",
+      "submitError": "Could not create the appointment. Try again.",
+      "validation": {
+        "doctor": "Choose a doctor.",
+        "patient": "Choose a patient."
+      }
+    }
+  },
+  "invoices": {
+    "title": "Invoice",
+    "subtitle": "Manage and view billings and payments",
+    "addButton": "Add Invoice",
+    "error": {
+      "load": "Could not load invoices.",
+      "retry": "Retry"
+    },
+    "empty": "No invoices match your filters.",
+    "toolbar": {
+      "searchPlaceholder": "Search For Anything...",
+      "searchAria": "Search invoices"
+    },
+    "filters": {
+      "all": "All",
+      "paid": "Paid",
+      "partially_paid": "Partially Paid",
+      "unpaid": "Unpaid"
+    },
+    "status": {
+      "unpaid": "Unpaid",
+      "partially_paid": "Partially Paid",
+      "paid": "Paid"
+    },
+    "table": {
+      "invoiceId": "Invoice ID",
+      "patient": "Patient",
+      "treatment": "Treatment Type",
+      "date": "Date",
+      "total": "Total",
+      "paid": "Paid",
+      "remaining": "Remaining",
+      "status": "Status",
+      "actions": "Actions",
+      "editAria": "Edit invoice"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "addModal": {
+      "title": "Add Invoice",
+      "patient": "Patient",
+      "patientPlaceholder": "Choose a Patient",
+      "treatment": "Treatment Type",
+      "treatmentPlaceholder": "Choose a Treatment",
+      "price": "Price",
+      "paidOptional": "Paid Amount (Optional)",
+      "moneyPlaceholder": "Numbers Only (USD $)",
+      "notes": "Notes",
+      "notesPlaceholder": "Type Notes About This Treatment",
+      "cancel": "Cancel",
+      "submit": "Add Invoice",
+      "saving": "Saving…",
+      "submitError": "Could not create the invoice. Try again.",
+      "validation": {
+        "patient": "Choose a patient.",
+        "treatment": "Choose a treatment.",
+        "total": "Enter a valid price.",
+        "notesMax": "Notes must be at most 100 characters.",
+        "paidTooHigh": "Paid amount cannot exceed price.",
+        "paidInvalid": "Enter a valid paid amount."
+      }
+    },
+    "details": {
+      "title": "Invoice Details",
+      "total": "Total",
+      "paid": "Paid",
+      "remaining": "Remaining",
+      "tabNewPayment": "New Payment",
+      "tabHistory": "Payments History",
+      "paymentDate": "Date",
+      "paymentAmount": "Amount",
+      "morePayments": "+ More Payments",
+      "removeRow": "Remove row",
+      "fixRows": "Fix the payment rows below.",
+      "noPayments": "No payments recorded yet.",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "savePaymentsError": "Could not save payments.",
+      "loadError": "Could not load invoice details.",
+      "retry": "Retry",
+      "confirmDeletePayment": "Delete this payment?",
+      "deletePaymentTitle": "Delete payment?",
+      "deletePaymentDescription": "This removes the payment from this invoice. This cannot be undone.",
+      "deletePaymentCancel": "Cancel",
+      "deletePaymentConfirm": "Delete",
+      "deletePaymentLoading": "Deleting…",
+      "deletePaymentError": "Could not delete this payment. Try again.",
+      "editPayment": "Edit payment",
+      "deletePayment": "Delete payment",
+      "cancelEdit": "Cancel",
+      "saveEdit": "Save",
+      "validation": {
+        "date": "Choose a date.",
+        "amount": "Enter a valid amount."
+      }
+    }
+  },
+  "labs": {
+    "title": "Labs Management",
+    "subtitle": "Manage and view all laboratories",
+    "addButton": "Add Lab",
+    "searchPlaceholder": "Search For Anything…",
+    "searchAria": "Search labs",
+    "error": {
+      "load": "Could not load laboratories.",
+      "retry": "Retry"
+    },
+    "empty": "No laboratories match your search.",
+    "deleteConfirm": "Delete laboratory \"{{name}}\"? This cannot be undone.",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "table": {
+      "lab": "Lab",
+      "phone": "Phone Number",
+      "totalRequests": "Total Requests",
+      "activeRequests": "Active Requests",
+      "actions": "Actions",
+      "editAria": "Edit lab",
+      "deleteAria": "Delete lab",
+      "requestsCountTotal_one": "{{count}} Request",
+      "requestsCountTotal_other": "{{count}} Requests",
+      "requestsCountActive_one": "{{count}} Request",
+      "requestsCountActive_other": "{{count}} Requests"
+    },
+    "modal": {
+      "titleAdd": "New Lab",
+      "titleEdit": "Edit Lab",
+      "name": "Laboratory name",
+      "namePlaceholder": "Enter laboratory name",
+      "phone": "Phone number",
+      "phonePlaceholder": "e.g. +963944759214",
+      "address": "Address",
+      "addressPlaceholder": "Street, city, or full address",
+      "cancel": "Cancel",
+      "submit": "Add Lab",
+      "save": "Save",
+      "saving": "Saving…",
+      "submitError": "Could not save the laboratory. Try again.",
+      "validation": {
+        "name": "Name is required.",
+        "phone": "Phone number is required.",
+        "phoneInvalid": "Enter a valid phone number (at least 8 digits).",
+        "address": "Address is required."
+      }
+    }
+  },
+  "labRequests": {
+    "title": "Labs Requests",
+    "subtitle": "Manage and view all laboratory Requests",
+    "addButton": "New Request",
+    "searchPlaceholder": "Search For Anything...",
+    "searchAria": "Search lab requests",
+    "error": {
+      "load": "Could not load lab requests.",
+      "retry": "Retry"
+    },
+    "empty": "No requests match your search.",
+    "deleteConfirm": "Delete this request for {{labName}} / {{patientName}}? This cannot be undone.",
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "status": {
+      "delivered": "Delivered",
+      "pending": "Pending",
+      "canceled": "Canceled"
+    },
+    "table": {
+      "lab": "Lab",
+      "patient": "Patient",
+      "workType": "Work Type",
+      "quantity": "Quantity",
+      "requestDate": "Request Date",
+      "cost": "Cost",
+      "status": "Status",
+      "actions": "Actions",
+      "editAria": "Edit request",
+      "deleteAria": "Delete request"
+    },
+    "modal": {
+      "titleAdd": "New Request",
+      "titleEdit": "Edit Request",
+      "lab": "Choose Lab",
+      "labPlaceholder": "Choose a lab",
+      "patient": "Choose Patient",
+      "patientPlaceholder": "Search For A Patient",
+      "patientSearchPlaceholder": "Search…",
+      "workType": "Work Type",
+      "workTypePlaceholder": "Choose work type",
+      "quantity": "Quantity",
+      "quantityPlaceholder": "Only Numbers",
+      "cost": "Cost ($)",
+      "costPlaceholder": "Only Numbers (USD$)",
+      "requestDate": "Request Date",
+      "notes": "Notes",
+      "notesPlaceholder": "Type Notes About This Request",
+      "cancel": "Cancel",
+      "submit": "Add Request",
+      "save": "Save",
+      "saving": "Saving…",
+      "submitError": "Could not save the request. Try again.",
+      "validation": {
+        "lab": "Choose a lab.",
+        "patient": "Choose a patient.",
+        "workType": "Choose a work type.",
+        "quantity": "Enter a valid quantity (whole number ≥ 1).",
+        "cost": "Enter a valid cost or leave empty.",
+        "notesMax": "Notes must be at most 100 characters.",
+        "requestDate": "Choose a date."
+      }
+    }
+  },
+  "doctors": {
+    "title": "Doctors",
+    "subtitle": "Manage and view your doctors",
+    "addButton": "Add Doctor",
+    "searchPlaceholder": "Search For Anything...",
+    "searchAria": "Search doctors",
+    "error": {
+      "load": "Could not load doctors.",
+      "retry": "Retry"
+    },
+    "empty": "No doctors match your search.",
+    "deleteConfirm": "Delete doctor \"{{name}}\"? This cannot be undone.",
+    "quota": {
+      "remaining_zero": "No doctor slots remaining",
+      "remaining_one": "{{count}} Doctor Remaining",
+      "remaining_other": "{{count}} Doctors Remaining"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "table": {
+      "doctor": "Doctor",
+      "phone": "Phone Number",
+      "treatments": "Treatments",
+      "revenue": "Revenue",
+      "outstanding": "Outstanding Payments",
+      "actions": "Actions",
+      "thisMonth": "This Month",
+      "editAria": "Edit doctor",
+      "deleteAria": "Delete doctor"
+    },
+    "wizard": {
+      "titleStep1": "Doctor’s Profile",
+      "titleStep2": "Doctor’s Information",
+      "titleEdit": "Edit Doctor",
+      "username": "Username",
+      "usernamePlaceholder": "e.g. dr.smith",
+      "password": "Password",
+      "passwordPlaceholder": "At least 8 characters",
+      "cancel": "Cancel",
+      "next": "Next",
+      "back": "Back",
+      "firstName": "First name",
+      "firstNamePlaceholder": "First name",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Last name",
+      "specialty": "Specialty",
+      "specialtyPlaceholder": "Choose specialty",
+      "phone": "Phone",
+      "commission": "Commission rate (%)",
+      "commissionPlaceholder": "0–100",
+      "certificate": "Certificate number (optional)",
+      "certificatePlaceholder": "License or certificate ID",
+      "save": "Save",
+      "submit": "Add Doctor",
+      "saving": "Saving…",
+      "submitError": "Could not save the doctor. Try again.",
+      "validation": {
+        "username": "Username is required.",
+        "password": "Password must be at least 8 characters.",
+        "firstName": "First name is required.",
+        "lastName": "Last name is required.",
+        "specialty": "Choose a specialty.",
+        "phone": "Phone is required.",
+        "commission": "Enter a valid commission between 0 and 100."
+      }
+    },
+    "detail": {
+      "back": "Back to doctors",
+      "edit": "Edit",
+      "email": "Email",
+      "phone": "Phone",
+      "registered": "Registered",
+      "error": "Could not load this doctor.",
+      "paymentDeleteConfirm": "Delete payment {{id}}?",
+      "paymentsTitle": "Payments History",
+      "recordPayment": "Record Payment",
+      "treatmentsTitle": "Treatments",
+      "editPayment": "Edit payment",
+      "deletePayment": "Delete payment",
+      "stats": {
+        "treatments": "Total Treatments",
+        "revenue": "Total Revenue",
+        "outstanding": "Outstanding Payments",
+        "remaining": "Remaining Payments"
+      },
+      "tabs": {
+        "payments": "Payments",
+        "treatments": "Treatments"
+      },
+      "paymentTable": {
+        "id": "Payment ID",
+        "date": "Date",
+        "amount": "Amount",
+        "method": "Payment method",
+        "actions": "Actions"
+      },
+      "treatmentTable": {
+        "date": "Date",
+        "type": "Treatment",
+        "tooth": "Tooth / Area",
+        "patient": "Patient",
+        "price": "Price",
+        "paid": "Paid",
+        "remaining": "Remaining"
+      }
+    },
+    "paymentModal": {
+      "title": "Payment",
+      "date": "Date",
+      "amount": "Amount",
+      "amountPlaceholder": "0.00",
+      "method": "Payment method (optional)",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "validation": {
+        "date": "Choose a date.",
+        "amount": "Enter a valid amount."
+      }
+    }
+  },
+  "secretaries": {
+    "title": "Secretaries",
+    "subtitle": "Manage and view your secretaries",
+    "addNurse": "Add Nurse",
+    "searchPlaceholder": "Search For Anything...",
+    "searchAria": "Search secretaries",
+    "error": {
+      "load": "Could not load secretaries.",
+      "retry": "Retry"
+    },
+    "empty": "No secretaries match your search.",
+    "deleteConfirm": "Delete secretary \"{{name}}\"? This cannot be undone.",
+    "quota": {
+      "remaining_zero": "No secretary slots remaining",
+      "remaining_one": "{{count}} Secretary Remaining",
+      "remaining_other": "{{count}} Secretaries Remaining"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "table": {
+      "name": "Name",
+      "phone": "Phone Number",
+      "username": "Username",
+      "password": "Password",
+      "actions": "Actions",
+      "editAria": "Edit secretary",
+      "deleteAria": "Delete secretary"
+    },
+    "wizard": {
+      "titleStep1": "Nurse’s Profile",
+      "titleStep2": "Secretary’s information",
+      "titleEdit": "Edit secretary",
+      "username": "Username",
+      "usernamePlaceholder": "Enter Username",
+      "password": "Password",
+      "passwordPlaceholder": "At Least 8 Characters",
+      "cancel": "Cancel",
+      "next": "Next",
+      "back": "Back",
+      "firstName": "First name",
+      "firstNamePlaceholder": "Enter first name",
+      "lastName": "Last name",
+      "lastNamePlaceholder": "Enter last name",
+      "phone": "Phone number",
+      "phonePlaceholder": "e.g. +963944759214",
+      "salary": "Salary",
+      "salaryPlaceholder": "Numbers Only (USD $)",
+      "save": "Save",
+      "submit": "Add Nurse",
+      "saving": "Saving…",
+      "submitError": "Could not save the secretary. Try again.",
+      "validation": {
+        "username": "Username is required.",
+        "password": "Password must be at least 8 characters.",
+        "firstName": "First name is required.",
+        "lastName": "Last name is required.",
+        "phone": "Phone is required.",
+        "salary": "Enter a valid salary."
+      }
+    }
+  },
+  "expenses": {
+    "title": "Expenses",
+    "subtitle": "Track and manage clinic expenses",
+    "addButton": "Add Expense",
+    "searchPlaceholder": "Search For Anything...",
+    "searchAria": "Search expenses",
+    "error": {
+      "load": "Could not load expenses.",
+      "retry": "Retry"
+    },
+    "empty": "No expenses match your filters.",
+    "deleteConfirm": "Delete expense \"{{title}}\"? This cannot be undone.",
+    "summary": {
+      "labPayments": "Lab's Payments",
+      "totalExpenses": "Total Expenses",
+      "doctorPayments": "Doctor's Payments",
+      "others": "Others"
+    },
+    "filters": {
+      "all": "All",
+      "labs": "Labs",
+      "doctors": "Doctors",
+      "others": "Others"
+    },
+    "categories": {
+      "labs": "Labs",
+      "doctors": "Doctors",
+      "others": "Others"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "table": {
+      "date": "Date",
+      "title": "Title",
+      "category": "Category",
+      "description": "Description",
+      "amount": "Amount",
+      "actions": "Actions",
+      "editAria": "Edit expense",
+      "deleteAria": "Delete expense"
+    },
+    "modal": {
+      "titleAdd": "New Expense",
+      "titleEdit": "Edit Expense",
+      "title": "Title",
+      "titlePlaceholder": "Enter Expense Title",
+      "category": "Category",
+      "categoryPlaceholder": "Choose a category",
+      "amount": "Amount",
+      "amountPlaceholder": "Numbers Only (USD $)",
+      "date": "Date",
+      "description": "Description",
+      "descriptionPlaceholder": "Type notes about this expense",
+      "cancel": "Cancel",
+      "submit": "Add Expense",
+      "save": "Save",
+      "saving": "Saving…",
+      "submitError": "Could not save the expense. Try again.",
+      "validation": {
+        "title": "Title is required.",
+        "category": "Choose a category.",
+        "amount": "Enter a valid amount.",
+        "date": "Choose a date.",
+        "descriptionMax": "Description must be at most 100 characters."
+      }
+    }
+  },
+  "reports": {
+    "title": "Reports",
+    "subtitle": "View reports about your clinics.",
+    "filters": {
+      "period": "Period",
+      "clinic": "Clinic",
+      "clinicPlaceholder": "Choose clinic"
+    },
+    "period": {
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "stats": {
+      "totalRevenue": "Total Revenue",
+      "totalExpenses": "Total Expenses",
+      "netProfit": "Net Profit",
+      "profitMargins": "Profit Margins"
+    },
+    "expensesBreakdownTitle": "Expenses Breakdown",
+    "chartTitle": "Revenue vs Expenses",
+    "emptyBreakdown": "No expense data for this period.",
+    "emptyChart": "No chart data for this period.",
+    "error": {
+      "load": "Could not load reports.",
+      "chart": "Could not load chart data.",
+      "retry": "Retry"
+    }
+  },
+  "patients": {
+    "list": {
+      "title": "Patients",
+      "subtitle": "Manage and view all patient records.",
+      "addPatient": "Add Patient",
+      "searchPlaceholder": "Search for anything…",
+      "searchAria": "Search patients",
+      "error": "Could not load patients.",
+      "retry": "Retry",
+      "empty": "No patients found.",
+      "showing": "Showing {{from}}–{{to}} of {{total}}",
+      "prev": "Previous",
+      "next": "Next",
+      "paginationAria": "Patients list pagination",
+      "pageAria": "Go to page {{page}}",
+      "deleteConfirmTitle": "Delete patient?",
+      "deleteConfirmDescription": "This will remove the patient from this clinic. This action cannot be undone.",
+      "deleteConfirmCancel": "Cancel",
+      "deleteConfirmAction": "Delete",
+      "deleteConfirmLoading": "Deleting…",
+      "deleteError": "Could not delete this patient. Try again."
+    },
+    "table": {
+      "patientId": "Patient ID",
+      "nameAndGender": "Name & Gender",
+      "age": "Age",
+      "name": "Name",
+      "id": "ID",
+      "phone": "Phone Number",
+      "email": "Email",
+      "lastVisit": "Last Visit",
+      "nextVisit": "Next Visit",
+      "actions": "Actions",
+      "view": "View",
+      "viewProfile": "View patient profile",
+      "openAppointments": "Open patient appointments",
+      "editPatient": "Edit patient",
+      "deletePatient": "Delete patient"
+    },
+    "gender": {
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    },
+    "addModal": {
+      "title": "New Patient",
+      "sectionBasic": "Basic information",
+      "sectionDob": "Date of birth",
+      "sectionFiles": "Files (optional)",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "firstNamePlaceholder": "First name",
+      "lastNamePlaceholder": "Last name",
+      "gender": "Gender",
+      "genderPlaceholder": "Choose a gender…",
+      "bloodTypeOptional": "Blood type (optional)",
+      "bloodTypePlaceholder": "Choose a type…",
+      "bloodTypeSkip": "Not specified",
+      "phoneNumber": "Phone number",
+      "phonePlaceholder": "Phone number",
+      "phone": "Phone",
+      "address": "Address",
+      "addressPlaceholder": "Address",
+      "fullName": "Full name",
+      "email": "Email",
+      "birthYear": "Birth year",
+      "bloodType": "Blood type",
+      "dobDay": "Day",
+      "dobMonth": "Month",
+      "dobYear": "Year",
+      "chooseDay": "Choose day",
+      "chooseMonth": "Choose month",
+      "chooseYear": "Choose year…",
+      "uploadTitle": "Upload an image",
+      "uploadHint": "PNG, JPG up to 5MB",
+      "uploadAria": "Upload patient image",
+      "removeFile": "Remove image",
+      "fileErrorType": "Please upload a PNG or JPG image.",
+      "fileErrorSize": "Image must be 5MB or smaller.",
+      "cancel": "Cancel",
+      "submit": "Add Patient",
+      "saving": "Saving…",
+      "validation": {
+        "fullName": "Enter a valid first and last name.",
+        "name": "Enter a valid name.",
+        "gender": "Choose a gender.",
+        "phone": "Enter a valid phone number.",
+        "email": "Enter a valid email.",
+        "birthYear": "Enter a valid birth year.",
+        "birthYearMax": "Birth year cannot be in the future.",
+        "address": "Enter an address.",
+        "bloodType": "Blood type is required.",
+        "dobIncomplete": "Choose day, month, and year.",
+        "dobInvalid": "Enter a valid date of birth."
+      }
+    },
+    "profile": {
+      "back": "Back to patients",
+      "error": "Could not load this patient.",
+      "idLabel": "ID : #{{id}}",
+      "idCode": "#{{code}}",
+      "edit": "Edit",
+      "share": "Share",
+      "shareDialog": {
+        "title": "Patient summary link",
+        "description": "Share this link with the patient. It opens a read-only summary page (demo balances and appointments) without signing in to the clinic.",
+        "urlLabel": "Patient portal link",
+        "copyAgain": "Copy again",
+        "done": "Done",
+        "copySuccess": "Link copied to clipboard.",
+        "copyFailed": "Could not copy automatically. Select the link above and copy it manually."
+      },
+      "gender": "Gender",
+      "bloodType": "Blood type",
+      "age": "Age",
+      "ageYears": "{{count}} Years Old",
+      "contactTitle": "Contact Information",
+      "email": "Email",
+      "phone": "Phone Number",
+      "address": "Address",
+      "activitiesTitle": "Recent Activities",
+      "lastVisit": "Last Visit",
+      "nextVisit": "Next Visit",
+      "filesTitle": "Files",
+      "noFiles": "No files uploaded.",
+      "uploadFileTitle": "Upload file",
+      "uploadFileHint": "PNG, JPG up to 5MB",
+      "uploadFileAria": "Upload patient file",
+      "uploaded": "Uploaded: {{date}}",
+      "deleteFile": "Delete",
+      "openFile": "Open File"
+    },
+    "tabs": {
+      "appointments": "Appointments",
+      "invoices": "Invoices",
+      "dental": "Dental Chart",
+      "treatments": "Treatments",
+      "clinical": "Clinical History"
+    },
+    "appointments": {
+      "title": "Appointments",
+      "empty": "No appointments.",
+      "columns": {
+        "date": "Date",
+        "time": "Time",
+        "doctor": "Doctor",
+        "treatment": "Treatment",
+        "actions": "Actions",
+        "status": "Status",
+        "notes": "Notes"
+      },
+      "editAppointment": "Edit appointment",
+      "editNotAvailable": "Editing appointments is not available yet.",
+      "deleteAppointment": "Delete appointment",
+      "deleteConfirmTitle": "Delete appointment?",
+      "deleteConfirmDescription": "This will remove the appointment from this patient record.",
+      "deleteConfirmCancel": "Cancel",
+      "deleteConfirmAction": "Delete",
+      "deleteConfirmLoading": "Deleting…",
+      "deleteError": "Could not delete this appointment. Try again.",
+      "status": {
+        "scheduled": "Scheduled",
+        "completed": "Completed",
+        "cancelled": "Cancelled"
+      }
+    },
+    "invoices": {
+      "title": "Invoices",
+      "addInvoice": "Add Invoice",
+      "addModalTitle": "Add Invoice",
+      "addModalPatient": "Patient",
+      "addModalTreatment": "Treatment Type",
+      "addModalSubmit": "Add Invoice",
+      "addModalSaving": "Saving…",
+      "editInvoice": "Edit invoice",
+      "empty": "No invoices for this patient.",
+      "summary": {
+        "total": "Total",
+        "paid": "Paid",
+        "remaining": "Remaining",
+        "totalInvoiced": "Total Invoiced",
+        "totalPaid": "Total Paid",
+        "totalRemaining": "Total Remaining"
+      },
+      "columns": {
+        "invoiceId": "Invoice ID",
+        "invoice": "Treatment",
+        "date": "Date",
+        "treatment": "Treatment Type",
+        "total": "Total",
+        "notes": "Notes",
+        "price": "Price",
+        "paid": "Paid",
+        "remaining": "Remaining",
+        "status": "Status",
+        "actions": "Actions"
+      }
+    },
+    "dental": {
+      "title": "Dental Chart",
+      "modeLabel": "Chart mode",
+      "modeAdult": "Adult (32 Teeth)",
+      "modeChild": "Child (20 Teeth)",
+      "upperJaw": "Upper Jaw",
+      "lowerJaw": "Lower Jaw",
+      "legendTitle": "Status legend",
+      "status": {
+        "natural": "Natural",
+        "filling": "Filling",
+        "extracted": "Extracted",
+        "crown": "Crown",
+        "implant": "Implant",
+        "decay": "Decay",
+        "previous": "Previous filling / crown"
+      },
+      "choosePart": "Choose a Part",
+      "choosePartHint": "Click on parts to select them.",
+      "selectAll": "Select All",
+      "surfaces": {
+        "buccal": "Buccal",
+        "mesial": "Mesial",
+        "distal": "Distal",
+        "occlusal": "Occlusal",
+        "lingual": "Lingual"
+      },
+      "canalsTitle": "Tooth Canals",
+      "canalName": "Name",
+      "canalLength": "Length",
+      "addCanal": "+ Add",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving…",
+      "toothTitle": "Tooth {{id}}",
+      "modalHistoryEmpty": "No treatments recorded for this tooth.",
+      "modalHistoryBack": "Back",
+      "modalFormBack": "Back",
+      "addTreatment": "Add Treatment",
+      "next": "Next",
+      "tableDate": "Date",
+      "tableTreatment": "Treatment",
+      "tableNote": "Note",
+      "tablePrice": "Price",
+      "tablePaid": "Paid",
+      "tableRemaining": "Remaining",
+      "chooseCategory": "Choose category",
+      "chooseTreatment": "Choose a treatment",
+      "priceOptional": "Treatment price (optional)",
+      "paidOptional": "Paid amount (optional)",
+      "pricePlaceholder": "Numbers only (USD $)",
+      "paidPlaceholder": "Numbers only (USD $)",
+      "notesPlaceholder": "Type notes about this treatment",
+      "notesCharCount": "{{current}}/{{max}}",
+      "notesMax": "Notes must be at most 100 characters.",
+      "validationNumericOptional": "Use numbers only (optional field).",
+      "demoCategory": {
+        "restorative": "Restorative",
+        "preventive": "Preventive"
+      },
+      "demoTreatment": {
+        "composite": "Composite filling",
+        "crown": "Crown"
+      }
+    },
+    "treatments": {
+      "title": "Treatments",
+      "empty": "No treatments recorded.",
+      "columns": {
+        "type": "Treatment Type",
+        "tooth": "Tooth/Area",
+        "date": "Date",
+        "notes": "Notes",
+        "price": "Price",
+        "paid": "Paid",
+        "remaining": "Remaining"
+      },
+      "stagesTitle": "Stages",
+      "newStage": "+ New Stage",
+      "stageLabel": "Stage {{n}}",
+      "expand": "Expand row",
+      "edit": "Edit",
+      "delete": "Delete",
+      "newStageTitle": "New Stage",
+      "stage": {
+        "noteLabel": "Note",
+        "notePlaceholder": "Type notes about this treatment's stage",
+        "charCount": "{{current}}/{{max}}",
+        "validation": "Enter a note (max 100 characters).",
+        "back": "Back",
+        "confirm": "Confirm",
+        "saving": "Saving…"
+      }
+    },
+    "clinicalHistory": {
+      "title": "Clinical History",
+      "addCta": "+ Add Clinical History",
+      "edit": "Edit",
+      "notProvided": "—",
+      "diseasesQuestion": "Do you have any of these diseases?",
+      "charCount": "{{current}}/{{max}}",
+      "placeholders": {
+        "otherDiseases": "Enter other diseases",
+        "medicines": "Enter medicines",
+        "allergies": "Enter allergies",
+        "surgeries": "Enter surgeries"
+      },
+      "sectionOthers": "Others",
+      "wizardTitle": "Clinical History",
+      "cancel": "Cancel",
+      "back": "Back",
+      "next": "Next",
+      "save": "Save",
+      "saving": "Saving…",
+      "yes": "Yes",
+      "no": "No",
+      "otherDiseases": "Other Diseases",
+      "medicinesQuestion": "Do you take medicines regularly?",
+      "medicinesLabel": "Medicines",
+      "allergiesQuestion": "Do you have drug allergies?",
+      "allergiesLabel": "Allergies",
+      "surgeryQuestion": "Have you had any previous surgery?",
+      "surgeriesLabel": "Surgeries",
+      "pregnantQuestion": "Are you pregnant?",
+      "smokeQuestion": "Do you smoke?",
+      "alcoholQuestion": "Do you drink alcohol?",
+      "reviewTitle": "Review",
+      "reviewDiseases": "Diseases selected: {{count}}",
+      "reviewMedicines": "Medicines regularly: {{v}}",
+      "sectionDiseases": "Diseases",
+      "sectionMedicines": "Medicines",
+      "sectionAllergies": "Allergies",
+      "sectionSurgeries": "Surgeries",
+      "sectionLifestyle": "Lifestyle",
+      "pregnantShort": "Pregnant",
+      "smokeShort": "Smoke",
+      "alcoholShort": "Alcohol",
+      "diseases": {
+        "d1": "Condition 1",
+        "d2": "Condition 2",
+        "d3": "Condition 3",
+        "d4": "Condition 4",
+        "d5": "Condition 5",
+        "d6": "Condition 6",
+        "d7": "Condition 7",
+        "d8": "Condition 8",
+        "d9": "Condition 9",
+        "d10": "Condition 10"
+      }
+    },
+    "edit": {
+      "title": "Edit Patient",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "lastVisit": "Last Visit",
+      "nextVisit": "Next Visit",
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "saving": "Saving…",
+      "validation": {
+        "name": "Name is required.",
+        "email": "Valid email required.",
+        "phone": "Phone is required.",
+        "address": "Address is required.",
+        "date": "Date is required."
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage Clinic Information And Settings",
+    "error": {
+      "load": "Could not load settings. Try again."
+    },
+    "tabs": {
+      "clinic": "Clinic Information",
+      "workDays": "Work Days",
+      "workHours": "Work Hours"
+    },
+    "clinic": {
+      "name": "Name",
+      "phone": "Phone Number",
+      "address": "Address",
+      "logo": "Clinic Logo",
+      "noLogo": "No logo",
+      "editLogo": "Edit"
+    },
+    "workDays": {
+      "sun": "Sunday",
+      "mon": "Monday",
+      "tue": "Tuesday",
+      "wed": "Wednesday",
+      "thu": "Thursday",
+      "fri": "Friday",
+      "sat": "Saturday"
+    },
+    "workHours": {
+      "start": "Start Time",
+      "end": "End Time"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "save": "Save Changes",
+      "saving": "Saving…"
+    },
+    "validation": {
+      "name": "Name is required.",
+      "phone": "Phone number is required.",
+      "address": "Address is required.",
+      "startTime": "Start time is required.",
+      "endTime": "End time is required.",
+      "endAfterStart": "End time must be after start time."
+    }
+  },
+  "auth": {
+    "login": {
+      "brand": "Astro Clinics",
+      "subtitle": "Multi-Clinic Dental Management System",
+      "title": "Welcome back",
+      "description": "Sign in to your account",
+      "email": "Email Address",
+      "emailPlaceholder": "admin@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "********",
+      "portalLabel": "Portal Type",
+      "portalPlaceholder": "Select portal type",
+      "portalClinic": "Clinic",
+      "portalAdmin": "Admin",
+      "submit": "Sign In"
+    }
+  },
+  "admin": {
+    "brand": "Astro Clinics",
+    "headerTitle": "Admin Dashboard",
+    "logout": "Logout",
+    "nav": {
+      "statistics": "Statistics",
+      "subscriptions": "Subscriptions",
+      "users": "Users",
+      "billing": "Billing Plans",
+      "labs": "Labs Management",
+      "clinics": "Clinics",
+      "products": "Products",
+      "schedule": "Schedule",
+      "staff": "Staff",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "totalUsers": "Total Users",
+      "activeUsers": "Active Users",
+      "clinicsCount": "Number Of Clinics",
+      "totalSubscriptions": "Total Subscriptions",
+      "popularPlan": "Most Popular Plan",
+      "totalRevenue": "Total Revenue",
+      "topSellers": "Top Sellers",
+      "revenuePerMonth": "Revenue Per Month",
+      "topPlans": "Top Selling Plans",
+      "subscriptionLabel": "Subscription",
+      "username": "Username",
+      "basicPlan": "Basic Plan",
+      "proPlan": "Pro Plan",
+      "freeTrial": "Free Trial"
+    },
+    "subscriptions": {
+      "title": "Subscriptions",
+      "subtitle": "Manage your subscriptions and payments",
+      "newSubscription": "New Subscription",
+      "searchPlaceholder": "Search For Anything...",
+      "filters": {
+        "all": "All",
+        "active": "Active",
+        "expired": "Expired"
+      },
+      "columns": {
+        "user": "User",
+        "planType": "Plan Type",
+        "startedAt": "Started At",
+        "expiresAt": "Expires At",
+        "remainingDays": "Remaining days",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "expired": "Expired"
+      },
+      "actions": {
+        "suspend": "Suspend",
+        "renew": "Renew",
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "days": "Days",
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "modal": {
+        "title": "New Subscription",
+        "userLabel": "Choose User",
+        "planLabel": "Choose Plan",
+        "selectPlaceholder": "Choose a ...",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "datePlaceholder": "Enter a Date",
+        "cancel": "Cancel",
+        "confirm": "Confirm Subscription"
+      }
+    },
+    "usersPage": {
+      "title": "User",
+      "subtitle": "Manage and View your Users",
+      "newUser": "New User",
+      "searchPlaceholder": "Search For Anything...",
+      "filterBy": "Filter By",
+      "filters": {
+        "all": "All",
+        "active": "Active",
+        "expired": "Expired"
+      },
+      "columns": {
+        "user": "User",
+        "phoneNumber": "Phone Number",
+        "clinics": "Clinics",
+        "subscriptions": "Subscriptions",
+        "revenue": "Revenue",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "status": {
+        "active": "Active",
+        "expired": "Expired"
+      },
+      "actions": {
+        "edit": "Edit user",
+        "delete": "Delete user"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "modal": {
+        "title": "New User",
+        "userName": "User Name",
+        "userNamePlaceholder": "Enter a Name",
+        "email": "Email Address",
+        "emailPlaceholder": "example@gmail.com",
+        "phone": "Phone Number",
+        "phonePlaceholder": "+XXX-XXXXXXXXX",
+        "address": "Address",
+        "addressPlaceholder": "+XXX-XXXXXXXXX",
+        "cancel": "Cancel",
+        "confirm": "Add User"
+      },
+      "details": {
+        "edit": "Edit",
+        "stats": {
+          "numberOfClinics": "Number Of Clinics",
+          "totalDoctors": "Total Doctors",
+          "totalSecretaries": "Total Secretaries",
+          "totalPatients": "Total Patients"
+        },
+        "dailyUsage": {
+          "title": "Daily Usage",
+          "subtitle": "View user's daily usage statistics",
+          "appointments": "Appointments",
+          "treatments": "Treatments",
+          "labsRequests": "Lab's Requests",
+          "patientsCreated": "Patients Created",
+          "upDelta": "+5.9% Than Yesterday",
+          "downDelta": "-5.9% Than Yesterday"
+        },
+        "subscriptionsTitle": "Subscriptions"
+      }
+    },
+    "billingPlans": {
+      "title": "Billing Plans",
+      "subtitle": "Manage and View your billing plans",
+      "newPlan": "New Plan",
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "modal": {
+        "title": "New Plan",
+        "planName": "Plan Name",
+        "planNamePlaceholder": "Enter a Name",
+        "price": "Price",
+        "pricePlaceholder": "Numbers Only (USD $)",
+        "duration": "Duration",
+        "durationPlaceholder": "Enter Duration",
+        "feature1": "Feature 1",
+        "feature2": "Feature 2",
+        "featurePlaceholder": "Enter a Feature",
+        "moreFeatures": "More Features",
+        "cancel": "Cancel",
+        "confirm": "Add Plan"
+      }
+    },
+    "labsManagement": {
+      "title": "Labs Management",
+      "subtitle": "Manage and view all laboratories",
+      "addLab": "Add Lab",
+      "searchPlaceholder": "Search For Anything...",
+      "columns": {
+        "lab": "Lab",
+        "phoneNumber": "Phone Number",
+        "totalRequests": "Total Requests",
+        "usedBy": "Used By",
+        "actions": "Actions"
+      },
+      "actions": {
+        "edit": "Edit lab",
+        "delete": "Delete lab"
+      },
+      "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "modal": {
+        "title": "New Lab",
+        "laboratoryName": "Laboratory Name",
+        "phoneNumber": "Phone Number",
+        "address": "Address",
+        "placeholder": "admin@example.com",
+        "cancel": "Cancel",
+        "confirm": "Add Lab"
+      }
+    }
+  }
+}
