@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type PortalType = 'clinic' | 'admin'
+export type PortalType = 'clinic'
 
 type AuthState = {
   token: string | null

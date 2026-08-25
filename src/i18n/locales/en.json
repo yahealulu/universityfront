@@ -4,8 +4,8 @@
     "clinicNamePlaceholder": "Clinic Name",
     "userMenu": "User account",
     "user": {
-      "name": "Admin User",
-      "email": "admin@example.com",
+      "name": "Clinic User",
+      "email": "clinic@example.com",
       "logout": "Logout"
     },
     "language": {
@@ -19,7 +19,7 @@
     "mobileNav": {
       "openMenu": "Open navigation menu",
       "sheetTitle": "Main navigation",
-      "adminSheetTitle": "Admin navigation"
+      "clinicSheetTitle": "Clinic navigation"
     }
   },
   "nav": {
@@ -1168,213 +1168,10 @@
       "title": "Welcome back",
       "description": "Sign in to your account",
       "email": "Email Address",
-      "emailPlaceholder": "admin@example.com",
+      "emailPlaceholder": "clinic@example.com",
       "password": "Password",
       "passwordPlaceholder": "********",
-      "portalLabel": "Portal Type",
-      "portalPlaceholder": "Select portal type",
-      "portalClinic": "Clinic",
-      "portalAdmin": "Admin",
       "submit": "Sign In"
-    }
-  },
-  "admin": {
-    "brand": "Astro Clinics",
-    "headerTitle": "Admin Dashboard",
-    "logout": "Logout",
-    "nav": {
-      "statistics": "Statistics",
-      "subscriptions": "Subscriptions",
-      "users": "Users",
-      "billing": "Billing Plans",
-      "labs": "Labs Management",
-      "clinics": "Clinics",
-      "products": "Products",
-      "schedule": "Schedule",
-      "staff": "Staff",
-      "settings": "Settings"
-    },
-    "dashboard": {
-      "totalUsers": "Total Users",
-      "activeUsers": "Active Users",
-      "clinicsCount": "Number Of Clinics",
-      "totalSubscriptions": "Total Subscriptions",
-      "popularPlan": "Most Popular Plan",
-      "totalRevenue": "Total Revenue",
-      "topSellers": "Top Sellers",
-      "revenuePerMonth": "Revenue Per Month",
-      "topPlans": "Top Selling Plans",
-      "subscriptionLabel": "Subscription",
-      "username": "Username",
-      "basicPlan": "Basic Plan",
-      "proPlan": "Pro Plan",
-      "freeTrial": "Free Trial"
-    },
-    "subscriptions": {
-      "title": "Subscriptions",
-      "subtitle": "Manage your subscriptions and payments",
-      "newSubscription": "New Subscription",
-      "searchPlaceholder": "Search For Anything...",
-      "filters": {
-        "all": "All",
-        "active": "Active",
-        "expired": "Expired"
-      },
-      "columns": {
-        "user": "User",
-        "planType": "Plan Type",
-        "startedAt": "Started At",
-        "expiresAt": "Expires At",
-        "remainingDays": "Remaining days",
-        "status": "Status",
-        "actions": "Actions"
-      },
-      "status": {
-        "active": "Active",
-        "expired": "Expired"
-      },
-      "actions": {
-        "suspend": "Suspend",
-        "renew": "Renew",
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "days": "Days",
-      "pagination": {
-        "previous": "Previous",
-        "next": "Next"
-      },
-      "modal": {
-        "title": "New Subscription",
-        "userLabel": "Choose User",
-        "planLabel": "Choose Plan",
-        "selectPlaceholder": "Choose a ...",
-        "fromLabel": "From",
-        "toLabel": "To",
-        "datePlaceholder": "Enter a Date",
-        "cancel": "Cancel",
-        "confirm": "Confirm Subscription"
-      }
-    },
-    "usersPage": {
-      "title": "User",
-      "subtitle": "Manage and View your Users",
-      "newUser": "New User",
-      "searchPlaceholder": "Search For Anything...",
-      "filterBy": "Filter By",
-      "filters": {
-        "all": "All",
-        "active": "Active",
-        "expired": "Expired"
-      },
-      "columns": {
-        "user": "User",
-        "phoneNumber": "Phone Number",
-        "clinics": "Clinics",
-        "subscriptions": "Subscriptions",
-        "revenue": "Revenue",
-        "status": "Status",
-        "actions": "Actions"
-      },
-      "status": {
-        "active": "Active",
-        "expired": "Expired"
-      },
-      "actions": {
-        "edit": "Edit user",
-        "delete": "Delete user"
-      },
-      "pagination": {
-        "previous": "Previous",
-        "next": "Next"
-      },
-      "modal": {
-        "title": "New User",
-        "userName": "User Name",
-        "userNamePlaceholder": "Enter a Name",
-        "email": "Email Address",
-        "emailPlaceholder": "example@gmail.com",
-        "phone": "Phone Number",
-        "phonePlaceholder": "+XXX-XXXXXXXXX",
-        "address": "Address",
-        "addressPlaceholder": "+XXX-XXXXXXXXX",
-        "cancel": "Cancel",
-        "confirm": "Add User"
-      },
-      "details": {
-        "edit": "Edit",
-        "stats": {
-          "numberOfClinics": "Number Of Clinics",
-          "totalDoctors": "Total Doctors",
-          "totalSecretaries": "Total Secretaries",
-          "totalPatients": "Total Patients"
-        },
-        "dailyUsage": {
-          "title": "Daily Usage",
-          "subtitle": "View user's daily usage statistics",
-          "appointments": "Appointments",
-          "treatments": "Treatments",
-          "labsRequests": "Lab's Requests",
-          "patientsCreated": "Patients Created",
-          "upDelta": "+5.9% Than Yesterday",
-          "downDelta": "-5.9% Than Yesterday"
-        },
-        "subscriptionsTitle": "Subscriptions"
-      }
-    },
-    "billingPlans": {
-      "title": "Billing Plans",
-      "subtitle": "Manage and View your billing plans",
-      "newPlan": "New Plan",
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "modal": {
-        "title": "New Plan",
-        "planName": "Plan Name",
-        "planNamePlaceholder": "Enter a Name",
-        "price": "Price",
-        "pricePlaceholder": "Numbers Only (USD $)",
-        "duration": "Duration",
-        "durationPlaceholder": "Enter Duration",
-        "feature1": "Feature 1",
-        "feature2": "Feature 2",
-        "featurePlaceholder": "Enter a Feature",
-        "moreFeatures": "More Features",
-        "cancel": "Cancel",
-        "confirm": "Add Plan"
-      }
-    },
-    "labsManagement": {
-      "title": "Labs Management",
-      "subtitle": "Manage and view all laboratories",
-      "addLab": "Add Lab",
-      "searchPlaceholder": "Search For Anything...",
-      "columns": {
-        "lab": "Lab",
-        "phoneNumber": "Phone Number",
-        "totalRequests": "Total Requests",
-        "usedBy": "Used By",
-        "actions": "Actions"
-      },
-      "actions": {
-        "edit": "Edit lab",
-        "delete": "Delete lab"
-      },
-      "pagination": {
-        "previous": "Previous",
-        "next": "Next"
-      },
-      "modal": {
-        "title": "New Lab",
-        "laboratoryName": "Laboratory Name",
-        "phoneNumber": "Phone Number",
-        "address": "Address",
-        "placeholder": "admin@example.com",
-        "cancel": "Cancel",
-        "confirm": "Add Lab"
-      }
     }
   }
 }

@@ -1,15 +1,8 @@
 import type { FC } from 'react'
 import { createBrowserRouter, Navigate, Outlet } from 'react-router-dom'
 
-import { AdminLayout } from '@/layouts/AdminLayout'
 import { AppLayout } from '@/layouts/AppLayout'
-import { AdminBillingPlansPage } from '@/pages/Admin/Billing'
 import { LoginPage } from '@/pages/Auth/LoginPage'
-import { AdminDashboardPage } from '@/pages/Admin/Dashboard'
-import { AdminLabsManagementPage } from '@/pages/Admin/Labs'
-import { AdminSubscriptionsPage } from '@/pages/Admin/Subscriptions'
-import { AdminUserDetailsPage } from '@/pages/Admin/Users/Details'
-import { AdminUsersPage } from '@/pages/Admin/Users'
 import { AppointmentsRoute } from '@/pages/Appointments/AppointmentsRoute'
 import { DashboardPage } from '@/pages/Dashboard'
 import { InvoicesRoute } from '@/pages/Invoices/InvoicesRoute'
@@ -28,9 +21,6 @@ import type { PortalType } from '@/store/auth.store'
 import { useAuthStore } from '@/store/auth.store'
 
 const getPortalHomePath = (portalType: PortalType | null): string => {
-  if (portalType === 'admin') {
-    return '/admin/dashboard'
-  }
   return '/clinic/dashboard'
 }
 
@@ -51,10 +41,6 @@ const PortalGuard: FC<{ portalType: PortalType }> = ({ portalType }) => {
 
   if (!token || !activePortalType) {
     return <Navigate to="/login" replace />
-  }
-
-  if (activePortalType !== portalType) {
-    return <Navigate to={getPortalHomePath(activePortalType)} replace />
   }
 
   return <Outlet />
@@ -87,25 +73,6 @@ export const router = createBrowserRouter([
           { path: 'expenses', element: <ExpensesRoute /> },
           { path: 'reports', element: <ReportsRoute /> },
           { path: 'settings', element: <SettingsRoute /> },
-        ],
-      },
-    ],
-  },
-  {
-    path: '/admin',
-    element: <PortalGuard portalType="admin" />,
-    children: [
-      {
-        element: <AdminLayout />,
-        children: [
-          { index: true, element: <Navigate to="dashboard" replace /> },
-          { path: 'dashboard', element: <AdminDashboardPage /> },
-          { path: 'subscriptions', element: <AdminSubscriptionsPage /> },
-          { path: 'users', element: <AdminUsersPage /> },
-          { path: 'users/:userId', element: <AdminUserDetailsPage /> },
-          { path: 'billing', element: <AdminBillingPlansPage /> },
-          { path: 'labs', element: <AdminLabsManagementPage /> },
-          { path: '*', element: <Navigate to="/admin/dashboard" replace /> },
         ],
       },
     ],
