@@ -8,6 +8,8 @@ import { ExpensesBreakdown } from '@/pages/Dashboard/components/ExpensesBreakdow
 import { RevenueExpensesChart } from '@/pages/Dashboard/components/RevenueExpensesChart'
 import { TodayAppointments } from '@/pages/Dashboard/components/TodayAppointments'
 import { TopDoctorsList } from '@/pages/Dashboard/components/TopDoctorsList'
+import { useAuthStore } from '@/store/auth.store'
+import { isOwnerRole } from '@/utils/permissions'
 
 const DashboardPageError: FC<FallbackProps> = ({ resetErrorBoundary }) => {
   const { t } = useTranslation()
@@ -43,20 +45,25 @@ const ChartSectionError: FC<FallbackProps> = ({ resetErrorBoundary }) => {
 }
 
 export const DashboardPage: FC = () => {
+  const role = useAuthStore((s) => s.role)
+  const isOwner = isOwnerRole(role)
+
   return (
     <ErrorBoundary FallbackComponent={DashboardPageError}>
       <div className="space-y-6">
         <DashboardStatsSection />
         <div className="grid gap-6 lg:grid-cols-2">
-          <TopDoctorsList />
+          {isOwner ? <TopDoctorsList /> : null}
           <TodayAppointments />
         </div>
-        <div className="grid gap-6 lg:grid-cols-2">
-          <ExpensesBreakdown />
-          <ErrorBoundary FallbackComponent={ChartSectionError}>
-            <RevenueExpensesChart />
-          </ErrorBoundary>
-        </div>
+        {isOwner ? (
+          <div className="grid gap-6 lg:grid-cols-2">
+            <ExpensesBreakdown />
+            <ErrorBoundary FallbackComponent={ChartSectionError}>
+              <RevenueExpensesChart />
+            </ErrorBoundary>
+          </div>
+        ) : null}
       </div>
     </ErrorBoundary>
   )

@@ -1,5 +1,6 @@
 import { Building2 } from 'lucide-react'
 import type { FC } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 
@@ -7,7 +8,8 @@ import { ClinicSwitcherPopover } from '@/components/common/ClinicSwitcher/Clinic
 import { Sheet, SheetContent, SheetTitle } from '@/components/ui/sheet'
 import { useUiStore } from '@/store/ui.store'
 
-import { clinicNavItems } from './clinicNavConfig'
+import { getNavItemsForRole } from './clinicNavConfig'
+import { useAuthStore } from '@/store/auth.store'
 
 type ClinicMobileNavSheetProps = {
   open: boolean
@@ -17,6 +19,8 @@ type ClinicMobileNavSheetProps = {
 export const ClinicMobileNavSheet: FC<ClinicMobileNavSheetProps> = ({ open, onOpenChange }) => {
   const { t } = useTranslation()
   const closeMobileNav = useUiStore((s) => s.closeMobileNav)
+  const role = useAuthStore((s) => s.role)
+  const navItems = useMemo(() => getNavItemsForRole(role), [role])
 
   const handleNavigate = () => {
     closeMobileNav()
@@ -34,7 +38,7 @@ export const ClinicMobileNavSheet: FC<ClinicMobileNavSheetProps> = ({ open, onOp
           <ClinicSwitcherPopover collapsed={false} />
         </div>
         <nav className="flex min-h-0 flex-1 flex-col gap-0.5 overflow-y-auto px-2 pb-8" aria-label={t('app.mobileNav.sheetTitle')}>
-          {clinicNavItems.map(({ to, key, icon: Icon }) => (
+          {navItems.map(({ to, key, icon: Icon }) => (
             <NavLink
               key={to}
               to={to}

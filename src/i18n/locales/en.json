@@ -27,6 +27,7 @@
     "patients": "Patients",
     "appointments": "Appointments",
     "invoice": "Invoice",
+    "myPayments": "My Payments",
     "labsManagement": "Labs Management",
     "labsRequests": "Labs Requests",
     "doctors": "Doctors",
@@ -34,6 +35,23 @@
     "expenses": "Expenses",
     "reports": "Reports",
     "settings": "Settings"
+  },
+  "clinicAccess": {
+    "title": "Clinic access",
+    "description": "Choose which clinics this user can access.",
+    "allClinics": "Access all clinics",
+    "allClinicsHint": "Includes current and future clinics.",
+    "selectClinics": "Select clinics",
+    "loading": "Loading clinics…",
+    "validation": {
+      "required": "Select at least one clinic"
+    }
+  },
+  "myPayments": {
+    "title": "My Payments",
+    "subtitle": "View your payment history and earnings summary",
+    "error": "Could not load your payment data.",
+    "empty": "No payments recorded yet."
   },
   "clinics": {
     "switcher": {
@@ -498,6 +516,7 @@
     "wizard": {
       "titleStep1": "Doctor’s Profile",
       "titleStep2": "Doctor’s Information",
+      "titleStep3": "Clinic access",
       "titleEdit": "Edit Doctor",
       "username": "Username",
       "usernamePlaceholder": "e.g. dr.smith",
@@ -619,6 +638,7 @@
     "wizard": {
       "titleStep1": "Nurse’s Profile",
       "titleStep2": "Secretary’s information",
+      "titleStep3": "Clinic access",
       "titleEdit": "Edit secretary",
       "username": "Username",
       "usernamePlaceholder": "Enter Username",
@@ -1169,8 +1189,11 @@
       "description": "Sign in to your account",
       "email": "Email Address",
       "emailPlaceholder": "clinic@example.com",
+      "identifier": "Email or username",
+      "identifierPlaceholder": "admin@clinic.com or admin",
       "password": "Password",
       "passwordPlaceholder": "********",
+      "error": "Invalid email/username or password",
       "submit": "Sign In"
     }
   }

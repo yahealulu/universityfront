@@ -7,6 +7,8 @@ import { useTranslation } from 'react-i18next'
 import { Skeleton } from '@/components/ui/skeleton'
 import { useAppointmentSchedule } from '@/hooks/appointments/useAppointmentSchedule'
 import { useAppointmentsMeta } from '@/hooks/appointments/useAppointmentsMeta'
+import { useAuthStore } from '@/store/auth.store'
+import { isDoctorRole } from '@/utils/permissions'
 
 import { AppointmentScheduleGrid } from './components/AppointmentScheduleGrid'
 import { AppointmentScheduleToolbar } from './components/AppointmentScheduleToolbar'
@@ -24,6 +26,14 @@ export const AppointmentsPage: FC = () => {
 
   const scheduleQuery = useAppointmentSchedule(selectedDay)
   const metaQuery = useAppointmentsMeta()
+  const role = useAuthStore((s) => s.role)
+  const userId = useAuthStore((s) => s.user?.id)
+
+  const scheduleDoctors = useMemo(() => {
+    const doctors = scheduleQuery.data?.doctors ?? []
+    if (!isDoctorRole(role) || !userId) return doctors
+    return doctors.filter((doctor) => doctor.id === userId)
+  }, [scheduleQuery.data?.doctors, role, userId])
 
   const formattedToolbarDate = useMemo(() => {
     const d = parseISO(selectedDay)
@@ -83,7 +93,7 @@ export const AppointmentsPage: FC = () => {
               className="mb-4"
             />
             <AppointmentScheduleGrid
-              doctors={scheduleQuery.data.doctors}
+              doctors={scheduleDoctors}
               appointments={scheduleQuery.data.appointments}
               dayStart={scheduleQuery.data.dayStart}
               dayEnd={scheduleQuery.data.dayEnd}

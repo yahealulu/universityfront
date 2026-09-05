@@ -16,6 +16,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
+import {
+  ClinicAccessStep,
+  validateClinicAccess,
+  type ClinicAccessValues,
+} from '@/components/shared/ClinicAccessStep'
 import { useCreateDoctor } from '@/hooks/doctors/useCreateDoctor'
 import { useUpdateDoctor } from '@/hooks/doctors/useUpdateDoctor'
 import type { DoctorFull } from '@/types/doctor.types'
@@ -61,7 +66,12 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
 }) => {
   const { t } = useTranslation()
   const isEdit = Boolean(editingDoctor)
-  const [step, setStep] = useState<1 | 2>(1)
+  const [step, setStep] = useState<1 | 2 | 3>(1)
+  const [clinicAccess, setClinicAccess] = useState<ClinicAccessValues>({
+    hasAllClinics: false,
+    clinicIds: [],
+  })
+  const [clinicAccessError, setClinicAccessError] = useState<string | null>(null)
 
   const s1 = useMemo(() => step1Schema(t), [t])
   const s2 = useMemo(() => step2Schema(t), [t])
@@ -99,6 +109,10 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
         commissionPercent: String(editingDoctor.commissionPercent),
         certificateNumber: editingDoctor.certificateNumber ?? '',
       })
+      setClinicAccess({
+        hasAllClinics: editingDoctor.hasAllClinics ?? false,
+        clinicIds: editingDoctor.clinicIds ?? [],
+      })
     } else {
       setStep(1)
       form1.reset({ username: '', password: '' })
@@ -110,7 +124,9 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
         commissionPercent: '',
         certificateNumber: '',
       })
+      setClinicAccess({ hasAllClinics: false, clinicIds: [] })
     }
+    setClinicAccessError(null)
   }, [open, isEdit, editingDoctor, form1, form2])
 
   const handleClose = () => {
@@ -120,7 +136,17 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
 
   const onNext = form1.handleSubmit(() => setStep(2))
 
-  const onSubmitCreate = form2.handleSubmit(async (v2) => {
+  const onNextToClinics = form2.handleSubmit(() => {
+    setClinicAccessError(null)
+    setStep(3)
+  })
+
+  const submitCreate = async (v2: Step2Values) => {
+    const accessError = validateClinicAccess(clinicAccess, t)
+    if (accessError) {
+      setClinicAccessError(accessError)
+      return
+    }
     const v1 = form1.getValues()
     try {
       await createMutation.mutateAsync({
@@ -132,15 +158,22 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
         phone: v2.phone,
         commissionPercent: Number(v2.commissionPercent),
         certificateNumber: v2.certificateNumber?.trim() ? v2.certificateNumber.trim() : null,
+        hasAllClinics: clinicAccess.hasAllClinics,
+        clinicIds: clinicAccess.clinicIds,
       })
       handleClose()
     } catch {
       // handled by mutation
     }
-  })
+  }
 
-  const onSubmitEdit = form2.handleSubmit(async (v2) => {
+  const submitEdit = async (v2: Step2Values) => {
     if (!editingDoctor) return
+    const accessError = validateClinicAccess(clinicAccess, t)
+    if (accessError) {
+      setClinicAccessError(accessError)
+      return
+    }
     try {
       await updateMutation.mutateAsync({
         id: editingDoctor.id,
@@ -151,13 +184,27 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
           phone: v2.phone,
           commissionPercent: Number(v2.commissionPercent),
           certificateNumber: v2.certificateNumber?.trim() ? v2.certificateNumber.trim() : null,
+          hasAllClinics: clinicAccess.hasAllClinics,
+          clinicIds: clinicAccess.clinicIds,
         },
       })
       handleClose()
     } catch {
       // handled
     }
-  })
+  }
+
+  const onSubmitClinicStep = () => {
+    const accessError = validateClinicAccess(clinicAccess, t)
+    if (accessError) {
+      setClinicAccessError(accessError)
+      return
+    }
+    void form2.handleSubmit(async (v2) => {
+      if (isEdit) await submitEdit(v2)
+      else await submitCreate(v2)
+    })()
+  }
 
   const saving = createMutation.isPending || updateMutation.isPending
   const err = isEdit ? updateMutation.error : createMutation.error
@@ -165,9 +212,11 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
   const title =
     step === 1
       ? t('doctors.wizard.titleStep1')
-      : isEdit
-        ? t('doctors.wizard.titleEdit')
-        : t('doctors.wizard.titleStep2')
+      : step === 3
+        ? t('doctors.wizard.titleStep3')
+        : isEdit
+          ? t('doctors.wizard.titleEdit')
+          : t('doctors.wizard.titleStep2')
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -212,9 +261,9 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
           </form>
         )}
 
-        {(step === 2 || isEdit) && (
+        {(step === 2 || isEdit) && step !== 3 && (
           <form
-            onSubmit={isEdit ? onSubmitEdit : onSubmitCreate}
+            onSubmit={isEdit ? onNextToClinics : onNextToClinics}
             className="space-y-4"
           >
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -309,6 +358,34 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
                 {t('doctors.wizard.cancel')}
               </Button>
               <Button type="submit" disabled={saving}>
+                {t('doctors.wizard.next')}
+              </Button>
+            </div>
+          </form>
+        )}
+
+        {step === 3 && (
+          <div className="space-y-4">
+            <ClinicAccessStep
+              values={clinicAccess}
+              onChange={setClinicAccess}
+              error={clinicAccessError}
+            />
+            {err && <p className="text-sm text-danger">{t('doctors.wizard.submitError')}</p>}
+            <div className="flex flex-wrap justify-end gap-3 pt-2">
+              <Button
+                type="button"
+                variant="outline"
+                className="border-border-card"
+                onClick={() => setStep(2)}
+                disabled={saving}
+              >
+                {t('doctors.wizard.back')}
+              </Button>
+              <Button type="button" variant="outline" className="border-border-card" onClick={handleClose} disabled={saving}>
+                {t('doctors.wizard.cancel')}
+              </Button>
+              <Button type="button" disabled={saving} onClick={onSubmitClinicStep}>
                 {saving
                   ? t('doctors.wizard.saving')
                   : isEdit
@@ -316,7 +393,7 @@ export const AddDoctorWizardModal: FC<AddDoctorWizardModalProps> = ({
                     : t('doctors.wizard.submit')}
               </Button>
             </div>
-          </form>
+          </div>
         )}
       </DialogContent>
     </Dialog>

@@ -7,8 +7,10 @@ import { NewClinicWizardModal } from '@/components/common/ClinicSwitcher/NewClin
 import { Button } from '@/components/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Skeleton } from '@/components/ui/skeleton'
-import { useClinicsList } from '@/hooks/clinics/useClinicsList'
+import { useActiveClinicSync } from '@/hooks/clinics/useActiveClinicSync'
+import { useAuthStore } from '@/store/auth.store'
 import { useClinicStore } from '@/store/clinic.store'
+import { isOwnerRole } from '@/utils/permissions'
 import { cn } from '@/lib/utils'
 
 export type ClinicSwitcherPopoverProps = {
@@ -17,11 +19,15 @@ export type ClinicSwitcherPopoverProps = {
 
 export const ClinicSwitcherPopover: FC<ClinicSwitcherPopoverProps> = ({ collapsed = false }) => {
   const { t } = useTranslation()
-  const { data: clinics, isLoading } = useClinicsList()
+  const role = useAuthStore((s) => s.role)
+  const { clinics, isLoading } = useActiveClinicSync()
   const activeClinicId = useClinicStore((s) => s.activeClinicId)
   const setActiveClinicId = useClinicStore((s) => s.setActiveClinicId)
   const [open, setOpen] = useState(false)
   const [wizardOpen, setWizardOpen] = useState(false)
+
+  const showSwitcher = (clinics?.length ?? 0) > 1
+  const canAddClinic = isOwnerRole(role)
 
   const triggerLabel = useMemo(() => {
     if (!clinics?.length) return t('app.clinicNamePlaceholder')
@@ -39,6 +45,51 @@ export const ClinicSwitcherPopover: FC<ClinicSwitcherPopoverProps> = ({ collapse
     setWizardOpen(true)
   }
 
+  if (!showSwitcher && !canAddClinic) {
+    if (!clinics?.length) return null
+    return (
+      <div
+        className={cn(
+          'flex w-full items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-3 py-2 text-start text-sm text-white',
+          collapsed && 'justify-center px-0',
+        )}
+        title={triggerLabel}
+      >
+        <span className="h-8 w-8 shrink-0 rounded bg-white/20" aria-hidden />
+        {!collapsed ? <span className="min-w-0 flex-1 truncate font-medium text-white/90">{triggerLabel}</span> : null}
+      </div>
+    )
+  }
+
+  if (!showSwitcher && canAddClinic) {
+    return (
+      <>
+        <div
+          className={cn(
+            'mb-2 flex w-full items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-3 py-2 text-start text-sm text-white',
+            collapsed && 'justify-center px-0',
+          )}
+          title={triggerLabel}
+        >
+          <span className="h-8 w-8 shrink-0 rounded bg-white/20" aria-hidden />
+          {!collapsed ? <span className="min-w-0 flex-1 truncate font-medium text-white/90">{triggerLabel}</span> : null}
+        </div>
+        {!collapsed ? (
+          <Button
+            type="button"
+            variant="outline"
+            className="w-full gap-2 border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white"
+            onClick={() => setWizardOpen(true)}
+          >
+            <Plus className="h-4 w-4" aria-hidden />
+            {t('clinics.switcher.addClinic')}
+          </Button>
+        ) : null}
+        <NewClinicWizardModal open={wizardOpen} onOpenChange={setWizardOpen} />
+      </>
+    )
+  }
+
   return (
     <>
       <Popover open={open} onOpenChange={setOpen}>
@@ -48,7 +99,7 @@ export const ClinicSwitcherPopover: FC<ClinicSwitcherPopoverProps> = ({ collapse
             className={cn(
               'flex w-full items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-3 py-2 text-start text-sm text-white transition-colors hover:bg-white/10',
               collapsed && 'justify-center px-0',
-              open && 'bg-white/10'
+              open && 'bg-white/10',
             )}
             aria-expanded={open}
             aria-label={t('clinics.switcher.triggerAria')}
@@ -92,7 +143,7 @@ export const ClinicSwitcherPopover: FC<ClinicSwitcherPopoverProps> = ({ collapse
                           'flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-start text-sm transition-colors',
                           isActive
                             ? 'bg-primary/10 font-semibold text-primary'
-                            : 'text-foreground hover:bg-muted/60'
+                            : 'text-foreground hover:bg-muted/60',
                         )}
                         aria-current={isActive ? 'true' : undefined}
                       >
@@ -107,16 +158,18 @@ export const ClinicSwitcherPopover: FC<ClinicSwitcherPopoverProps> = ({ collapse
               </ul>
             )}
           </div>
-          <div className="border-t border-border-card p-3">
-            <Button
-              type="button"
-              className="w-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
-              onClick={openWizard}
-            >
-              <Plus className="h-4 w-4" aria-hidden />
-              {t('clinics.switcher.addClinic')}
-            </Button>
-          </div>
+          {canAddClinic ? (
+            <div className="border-t border-border-card p-3">
+              <Button
+                type="button"
+                className="w-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={openWizard}
+              >
+                <Plus className="h-4 w-4" aria-hidden />
+                {t('clinics.switcher.addClinic')}
+              </Button>
+            </div>
+          ) : null}
         </PopoverContent>
       </Popover>
 

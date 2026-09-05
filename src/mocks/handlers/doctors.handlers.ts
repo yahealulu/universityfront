@@ -214,6 +214,8 @@ export const doctorsHandlers = [
       certificateNumber: body.certificateNumber?.trim() ? body.certificateNumber.trim() : null,
       email,
       registeredAt,
+      hasAllClinics: body.hasAllClinics ?? false,
+      clinicIds: body.clinicIds ?? [],
       treatmentsThisMonth: 0,
       revenueThisMonth: 0,
       outstandingThisMonth: 0,

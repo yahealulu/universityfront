@@ -18,7 +18,7 @@ apiClient.interceptors.request.use((config) => {
     config.headers.Authorization = `Bearer ${token}`
   }
   if (clinicId) {
-    config.headers['X-Tenant-ID'] = clinicId
+    config.headers['X-Clinic-ID'] = clinicId
   }
 
   return config

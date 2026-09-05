@@ -10,7 +10,7 @@ import { ClinicSwitcherPopover } from '@/components/common/ClinicSwitcher/Clinic
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { useActiveClinicSync } from '@/hooks/clinics/useActiveClinicSync'
 import { useLgBreakpoint } from '@/hooks/useLgBreakpoint'
-import { clinicNavItems } from '@/layouts/shell/clinicNavConfig'
+import { getNavItemsForRole } from '@/layouts/shell/clinicNavConfig'
 import { ClinicMobileNavSheet } from '@/layouts/shell/ClinicMobileNavSheet'
 import { useAuthStore } from '@/store/auth.store'
 import { useUiStore } from '@/store/ui.store'
@@ -18,6 +18,9 @@ import { useUiStore } from '@/store/ui.store'
 export const AppLayout: FC = () => {
   const { t, i18n } = useTranslation()
   const logout = useAuthStore((s) => s.logout)
+  const user = useAuthStore((s) => s.user)
+  const role = useAuthStore((s) => s.role)
+  const navItems = useMemo(() => getNavItemsForRole(role), [role])
   const location = useLocation()
   const [isLanguageSwitching, setIsLanguageSwitching] = useState(false)
   const { activeClinicName } = useActiveClinicSync()
@@ -138,7 +141,7 @@ export const AppLayout: FC = () => {
           <ClinicSwitcherPopover collapsed={isSidebarCollapsed} />
         </div>
         <nav className={['flex flex-1 flex-col gap-0.5 pb-6', isSidebarCollapsed ? 'px-3' : 'px-2'].join(' ')}>
-          {clinicNavItems.map(({ to, key, icon: Icon }) => (
+          {navItems.map(({ to, key, icon: Icon }) => (
             <NavLink
               key={to}
               to={to}
@@ -204,9 +207,11 @@ export const AppLayout: FC = () => {
               >
                 <div className="space-y-2 p-4">
                   <div>
-                    <p className="text-xl font-semibold leading-none text-slate-900">{t('app.user.name')}</p>
+                    <p className="text-xl font-semibold leading-none text-slate-900">
+                      {user?.name ?? t('app.user.name')}
+                    </p>
                     <p className="mt-2 text-lg text-[#6a7fa9] underline decoration-[#d7e0ef] underline-offset-4">
-                      {t('app.user.email')}
+                      {user?.email ?? user?.username ?? t('app.user.email')}
                     </p>
                   </div>
                   <div className="h-px bg-slate-100" />

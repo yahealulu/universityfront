@@ -25,6 +25,8 @@ export type SecretaryFull = {
   name: string
   phone: string
   salary: number
+  hasAllClinics?: boolean
+  clinicIds?: string[]
 }
 
 export type SecretaryCreateInput = {
@@ -34,6 +36,8 @@ export type SecretaryCreateInput = {
   lastName: string
   phone: string
   salary: number
+  hasAllClinics?: boolean
+  clinicIds?: string[]
 }
 
 export type SecretaryUpdateInput = {
@@ -41,4 +45,6 @@ export type SecretaryUpdateInput = {
   lastName: string
   phone: string
   salary: number
+  hasAllClinics?: boolean
+  clinicIds?: string[]
 }

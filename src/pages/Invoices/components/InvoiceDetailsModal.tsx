@@ -24,8 +24,10 @@ import { useAddInvoicePayments } from '@/hooks/invoices/useAddInvoicePayments'
 import { useDeleteInvoicePayment } from '@/hooks/invoices/useDeleteInvoicePayment'
 import { useInvoice } from '@/hooks/invoices/useInvoice'
 import { useUpdateInvoicePayment } from '@/hooks/invoices/useUpdateInvoicePayment'
+import { useAuthStore } from '@/store/auth.store'
 import { getInvoiceDerived } from '@/types/invoice.types'
 import { formatInvoiceMoney } from '@/utils/formatters'
+import { isSecretaryRole } from '@/utils/permissions'
 
 const createNewPaymentsSchema = (t: (k: string) => string) =>
   z.object({
@@ -68,6 +70,8 @@ export const InvoiceDetailsModal: FC<InvoiceDetailsModalProps> = ({
   const { t, i18n } = useTranslation()
   const locale = i18n.language.startsWith('ar') ? ar : enUS
   const schema = useMemo(() => createNewPaymentsSchema(t), [t])
+  const role = useAuthStore((s) => s.role)
+  const canEditPaymentHistory = !isSecretaryRole(role)
 
   const { data: invoice, isPending, isError, refetch } = useInvoice(open ? invoiceId : null)
   const addPayments = useAddInvoicePayments()
@@ -285,15 +289,20 @@ export const InvoiceDetailsModal: FC<InvoiceDetailsModalProps> = ({
                         <th className="px-3 py-2.5 text-start text-sm font-semibold">
                           {t('invoices.details.paymentAmount')}
                         </th>
-                        <th className="px-3 py-2.5 text-end text-sm font-semibold">
-                          {t('invoices.table.actions')}
-                        </th>
+                        {canEditPaymentHistory ? (
+                          <th className="px-3 py-2.5 text-end text-sm font-semibold">
+                            {t('invoices.table.actions')}
+                          </th>
+                        ) : null}
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-border-card">
                       {invoice.payments.length === 0 ? (
                         <tr>
-                          <td colSpan={3} className="px-3 py-6 text-center text-muted-foreground">
+                          <td
+                            colSpan={canEditPaymentHistory ? 3 : 2}
+                            className="px-3 py-6 text-center text-muted-foreground"
+                          >
                             {t('invoices.details.noPayments')}
                           </td>
                         </tr>
@@ -323,46 +332,48 @@ export const InvoiceDetailsModal: FC<InvoiceDetailsModalProps> = ({
                                 formatInvoiceMoney(p.amount)
                               )}
                             </td>
-                            <td className="px-3 py-2 text-end">
-                              {editingId === p.id ? (
-                                <div className="flex justify-end gap-1">
-                                  <Button type="button" size="sm" variant="outline" onClick={cancelEdit}>
-                                    {t('invoices.details.cancelEdit')}
-                                  </Button>
-                                  <Button
-                                    type="button"
-                                    size="sm"
-                                    onClick={() => void saveEdit(p.id)}
-                                    disabled={updatePayment.isPending}
-                                  >
-                                    {t('invoices.details.saveEdit')}
-                                  </Button>
-                                </div>
-                              ) : (
-                                <div className="flex justify-end gap-1">
-                                  <Button
-                                    type="button"
-                                    size="icon"
-                                    variant="ghost"
-                                    className="h-8 w-8 text-primary"
-                                    aria-label={t('invoices.details.editPayment')}
-                                    onClick={() => startEdit(p.id, p.paidAt, p.amount)}
-                                  >
-                                    <Pencil className="h-4 w-4" />
-                                  </Button>
-                                  <Button
-                                    type="button"
-                                    size="icon"
-                                    variant="ghost"
-                                    className="h-8 w-8 text-danger"
-                                    aria-label={t('invoices.details.deletePayment')}
-                                    onClick={() => setPendingDeletePaymentId(p.id)}
-                                  >
-                                    <Trash2 className="h-4 w-4" />
-                                  </Button>
-                                </div>
-                              )}
-                            </td>
+                            {canEditPaymentHistory ? (
+                              <td className="px-3 py-2 text-end">
+                                {editingId === p.id ? (
+                                  <div className="flex justify-end gap-1">
+                                    <Button type="button" size="sm" variant="outline" onClick={cancelEdit}>
+                                      {t('invoices.details.cancelEdit')}
+                                    </Button>
+                                    <Button
+                                      type="button"
+                                      size="sm"
+                                      onClick={() => void saveEdit(p.id)}
+                                      disabled={updatePayment.isPending}
+                                    >
+                                      {t('invoices.details.saveEdit')}
+                                    </Button>
+                                  </div>
+                                ) : (
+                                  <div className="flex justify-end gap-1">
+                                    <Button
+                                      type="button"
+                                      size="icon"
+                                      variant="ghost"
+                                      className="h-8 w-8 text-primary"
+                                      aria-label={t('invoices.details.editPayment')}
+                                      onClick={() => startEdit(p.id, p.paidAt, p.amount)}
+                                    >
+                                      <Pencil className="h-4 w-4" />
+                                    </Button>
+                                    <Button
+                                      type="button"
+                                      size="icon"
+                                      variant="ghost"
+                                      className="h-8 w-8 text-danger"
+                                      aria-label={t('invoices.details.deletePayment')}
+                                      onClick={() => setPendingDeletePaymentId(p.id)}
+                                    >
+                                      <Trash2 className="h-4 w-4" />
+                                    </Button>
+                                  </div>
+                                )}
+                              </td>
+                            ) : null}
                           </tr>
                         ))
                       )}

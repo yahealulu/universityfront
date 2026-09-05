@@ -27,6 +27,7 @@
     "patients": "المرضى",
     "appointments": "المواعيد",
     "invoice": "الفواتير",
+    "myPayments": "مدفوعاتي",
     "labsManagement": "إدارة المختبرات",
     "labsRequests": "طلبات المختبر",
     "doctors": "الأطباء",
@@ -34,6 +35,23 @@
     "expenses": "المصاريف",
     "reports": "التقارير",
     "settings": "الإعدادات"
+  },
+  "clinicAccess": {
+    "title": "صلاحية العيادات",
+    "description": "اختر العيادات التي يمكن لهذا المستخدم الوصول إليها.",
+    "allClinics": "الوصول لجميع العيادات",
+    "allClinicsHint": "يشمل العيادات الحالية والمستقبلية.",
+    "selectClinics": "اختر العيادات",
+    "loading": "جاري تحميل العيادات…",
+    "validation": {
+      "required": "يرجى اختيار عيادة واحدة على الأقل"
+    }
+  },
+  "myPayments": {
+    "title": "مدفوعاتي",
+    "subtitle": "عرض سجل المدفوعات وملخص الأرباح",
+    "error": "تعذر تحميل بيانات المدفوعات.",
+    "empty": "لا توجد مدفوعات مسجلة بعد."
   },
   "clinics": {
     "switcher": {
@@ -509,6 +527,7 @@
     "wizard": {
       "titleStep1": "ملف الطبيب",
       "titleStep2": "معلومات الطبيب",
+      "titleStep3": "صلاحية العيادات",
       "titleEdit": "تعديل الطبيب",
       "username": "اسم المستخدم",
       "usernamePlaceholder": "مثال: dr.smith",
@@ -633,6 +652,7 @@
     "wizard": {
       "titleStep1": "ملف الممرضة",
       "titleStep2": "معلومات السكرتير",
+      "titleStep3": "صلاحية العيادات",
       "titleEdit": "تعديل السكرتير",
       "username": "اسم المستخدم",
       "usernamePlaceholder": "أدخل اسم المستخدم",
@@ -1183,8 +1203,11 @@
       "description": "سجل الدخول إلى حسابك",
       "email": "البريد الإلكتروني",
       "emailPlaceholder": "clinic@example.com",
+      "identifier": "البريد الإلكتروني أو اسم المستخدم",
+      "identifierPlaceholder": "admin@clinic.com أو admin",
       "password": "كلمة المرور",
       "passwordPlaceholder": "********",
+      "error": "البريد الإلكتروني/اسم المستخدم أو كلمة المرور غير صحيحة",
       "submit": "تسجيل الدخول"
     }
   }

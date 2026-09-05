@@ -55,6 +55,8 @@ const mkDoctor = (
   certificateNumber,
   email,
   registeredAt,
+  hasAllClinics: false,
+  clinicIds: [],
   treatmentsThisMonth: metrics.treatmentsThisMonth,
   revenueThisMonth: metrics.revenueThisMonth,
   outstandingThisMonth: metrics.outstandingThisMonth,

@@ -46,6 +46,8 @@ const doctorFullSchema = z.object({
   certificateNumber: z.string().nullable(),
   email: z.string(),
   registeredAt: z.string(),
+  hasAllClinics: z.boolean().optional().default(false),
+  clinicIds: z.array(z.string()).optional().default([]),
   treatmentsThisMonth: z.number(),
   revenueThisMonth: z.number(),
   outstandingThisMonth: z.number(),
@@ -100,6 +102,11 @@ export const doctorsApi = {
 
   getDetail: async (id: string) => {
     const res = await apiClient.get<unknown>(endpoints.doctors.detail(id))
+    return parseApiResponse(res.data, doctorDetailPayloadSchema)
+  },
+
+  getMe: async () => {
+    const res = await apiClient.get<unknown>(endpoints.doctors.me)
     return parseApiResponse(res.data, doctorDetailPayloadSchema)
   },
 

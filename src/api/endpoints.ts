@@ -13,6 +13,7 @@ export const endpoints = {
     list: `${API}/doctors`,
     meta: `${API}/doctors/meta`,
     detail: (id: string) => `${API}/doctors/${id}`,
+    me: `${API}/doctors/me`,
     payments: (doctorId: string) => `${API}/doctors/${doctorId}/payments`,
     payment: (doctorId: string, paymentId: string) =>
       `${API}/doctors/${doctorId}/payments/${paymentId}`,

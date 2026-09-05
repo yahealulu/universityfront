@@ -32,6 +32,8 @@ export type DoctorFull = {
   certificateNumber: string | null
   email: string
   registeredAt: string
+  hasAllClinics?: boolean
+  clinicIds?: string[]
   treatmentsThisMonth: number
   revenueThisMonth: number
   outstandingThisMonth: number
@@ -82,6 +84,8 @@ export type DoctorCreateInput = {
   phone: string
   commissionPercent: number
   certificateNumber: string | null
+  hasAllClinics?: boolean
+  clinicIds?: string[]
 }
 
 export type DoctorUpdateInput = {
@@ -91,6 +95,8 @@ export type DoctorUpdateInput = {
   phone: string
   commissionPercent: number
   certificateNumber: string | null
+  hasAllClinics?: boolean
+  clinicIds?: string[]
 }
 
 export type DoctorsMetaPayload = {

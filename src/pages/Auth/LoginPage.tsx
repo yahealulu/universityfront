@@ -4,32 +4,42 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 
+import { authApi } from '@/api/modules/auth.api'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import type { PortalType } from '@/store/auth.store'
 import { useAuthStore } from '@/store/auth.store'
-
-const DEFAULT_PORTAL: PortalType = 'clinic'
+import { getHomePathForRole } from '@/utils/permissions'
 
 export const LoginPage: FC = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
-  const setSession = useAuthStore((state) => state.setSession)
+  const setAuthSession = useAuthStore((state) => state.setAuthSession)
 
-  const [email, setEmail] = useState('clinic@example.com')
-  const [password, setPassword] = useState('********')
+  const [identifier, setIdentifier] = useState('admin@clinic.com')
+  const [password, setPassword] = useState('password123')
+  const [error, setError] = useState<string | null>(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const portalType: PortalType = 'clinic'
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-
-    setSession({
-      token: `mock-${portalType}-token`,
-      portalType,
-    })
-
-    navigate('/clinic/dashboard', { replace: true })
+    setError(null)
+    setIsSubmitting(true)
+    try {
+      const data = await authApi.login({ identifier: identifier.trim(), password })
+      setAuthSession({ ...data, portalType })
+      navigate(getHomePathForRole(data.user.role), { replace: true })
+    } catch {
+      setError(
+        t('auth.login.error', {
+          defaultValue: 'Invalid email/username or password',
+        }),
+      )
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -51,14 +61,15 @@ export const LoginPage: FC = () => {
 
           <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
             <div className="space-y-1.5">
-              <Label htmlFor="login-email">{t('auth.login.email')}</Label>
+              <Label htmlFor="login-identifier">{t('auth.login.identifier')}</Label>
               <Input
-                id="login-email"
-                name="email"
-                type="email"
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder={t('auth.login.emailPlaceholder')}
+                id="login-identifier"
+                name="identifier"
+                type="text"
+                autoComplete="username"
+                value={identifier}
+                onChange={(event) => setIdentifier(event.target.value)}
+                placeholder={t('auth.login.identifierPlaceholder')}
                 required
               />
             </div>
@@ -69,6 +80,7 @@ export const LoginPage: FC = () => {
                 id="login-password"
                 name="password"
                 type="password"
+                autoComplete="current-password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 placeholder={t('auth.login.passwordPlaceholder')}
@@ -76,8 +88,12 @@ export const LoginPage: FC = () => {
               />
             </div>
 
-            <Button type="submit" className="w-full">
-              {t('auth.login.submit')}
+            {error ? <p className="text-sm text-red-500">{error}</p> : null}
+
+            <Button type="submit" className="w-full" disabled={isSubmitting}>
+              {isSubmitting
+                ? t('auth.login.submitting', { defaultValue: 'Signing in...' })
+                : t('auth.login.submit')}
             </Button>
           </form>
         </section>

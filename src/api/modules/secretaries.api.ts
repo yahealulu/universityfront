@@ -29,6 +29,8 @@ const secretaryFullSchema = z.object({
   name: z.string(),
   phone: z.string(),
   salary: z.number(),
+  hasAllClinics: z.boolean().optional().default(false),
+  clinicIds: z.array(z.string()).optional().default([]),
 })
 
 export const secretariesApi = {
